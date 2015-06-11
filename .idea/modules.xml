@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/musd-model/musd-model.iml" filepath="$PROJECT_DIR$/musd-model/musd-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/musd-web/musd-web.iml" filepath="$PROJECT_DIR$/musd-web/musd-web.iml" />
+    </modules>
+  </component>
+</project>
