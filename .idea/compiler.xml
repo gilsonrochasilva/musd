@@ -22,12 +22,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="musd-model" />
+        <module name="musd-concentrador" />
+        <module name="musd-sincronizador" />
         <module name="musd-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="musd-concentrador" target="1.5" />
       <module name="musd-model" target="1.5" />
+      <module name="musd-sincronizador" target="1.5" />
       <module name="musd-web" target="1.5" />
     </bytecodeTargetLevel>
   </component>
