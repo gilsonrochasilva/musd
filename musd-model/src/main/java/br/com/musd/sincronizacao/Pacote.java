@@ -1,6 +1,8 @@
 package br.com.musd.sincronizacao;
 
-public class Pacote {
+import java.io.Serializable;
+
+public class Pacote implements Serializable {
 
 	private String dados;
 
