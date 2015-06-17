@@ -11,6 +11,8 @@
       <list>
         <option value="$PROJECT_DIR$/musd-model/pom.xml" />
         <option value="$PROJECT_DIR$/musd-web/pom.xml" />
+        <option value="$PROJECT_DIR$/musd-concentrador/pom.xml" />
+        <option value="$PROJECT_DIR$/musd-sincronizador/pom.xml" />
       </list>
     </option>
   </component>
