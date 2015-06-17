@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/musd-concentrador/musd-concentrador.iml" filepath="$PROJECT_DIR$/musd-concentrador/musd-concentrador.iml" />
       <module fileurl="file://$PROJECT_DIR$/musd-model/musd-model.iml" filepath="$PROJECT_DIR$/musd-model/musd-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/musd-sincronizador/musd-sincronizador.iml" filepath="$PROJECT_DIR$/musd-sincronizador/musd-sincronizador.iml" />
       <module fileurl="file://$PROJECT_DIR$/musd-web/musd-web.iml" filepath="$PROJECT_DIR$/musd-web/musd-web.iml" />
     </modules>
   </component>
