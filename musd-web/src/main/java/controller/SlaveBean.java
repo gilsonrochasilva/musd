@@ -6,4 +6,4 @@ package controller;
 public class SlaveBean {
 
 }
-}
+
