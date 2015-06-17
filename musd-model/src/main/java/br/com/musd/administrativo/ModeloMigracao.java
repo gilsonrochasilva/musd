@@ -8,7 +8,9 @@ public class ModeloMigracao {
 
 	private String nome;
 
-	private List<Host> host;
+	private List<Slave> slaves;
+
+	private Master master;
 
 	private List<JanelaSincronizacao> janelaSincronizacao;
 
@@ -28,12 +30,20 @@ public class ModeloMigracao {
 		this.nome = nome;
 	}
 
-	public List<Host> getHost() {
-		return host;
+	public List<Slave> getSlaves() {
+		return slaves;
 	}
 
-	public void setHost(List<Host> host) {
-		this.host = host;
+	public void setSlaves(List<Slave> slaves) {
+		this.slaves = slaves;
+	}
+
+	public Master getMaster() {
+		return master;
+	}
+
+	public void setMaster(Master master) {
+		this.master = master;
 	}
 
 	public List<JanelaSincronizacao> getJanelaSincronizacao() {
