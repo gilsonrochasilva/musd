@@ -22,7 +22,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="musd-concentrador" />
+        <module name="musd-model" />
         <module name="musd-sincronizador" />
         <module name="musd-web" />
       </profile>
