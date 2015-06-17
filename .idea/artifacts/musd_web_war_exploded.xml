@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="musd-web:war exploded">
-    <output-path>$PROJECT_DIR$/musd-web/target/musd-web.war</output-path>
+    <output-path>$PROJECT_DIR$/musd-web/target/musd-web-1.0-SNAPSHOT</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
