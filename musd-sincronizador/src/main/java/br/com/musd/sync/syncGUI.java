@@ -8,7 +8,6 @@ import br.com.musd.sincronizacao.Pacote;
 import br.com.musd.sincronizacao.Repositorio;
 import br.com.musd.sincronizacao.Sincronizador;
 import br.com.musd.sync.util.GeradorDeDados;
-import br.com.musd.sync.util.SimulaServidor;
 
 import javax.swing.*;
 import java.io.IOException;
@@ -87,12 +86,14 @@ public class syncGUI extends JFrame{
                 repositorio.adicionar(pacote);
             }
 
+            sincronizador.setMaster(modeloMigracao.getMaster());
             sincronizador.conectar();
 
+            System.out.println("Pacotes no repositório: " +  pacotes.size());
 
-            SimulaServidor simulaServidor = new SimulaServidor();
+            sincronizador.enviar(pacotes);
 
-            simulaServidor.run();
+            sincronizador.desconectar();
 
         }
         catch (ParseException pex){

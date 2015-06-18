@@ -42,18 +42,22 @@ public class Sincronizador  {
 		return null;
 	}
 
-	public void conectar() throws UnknownHostException, IOException {
-		socket = new Socket(InetAddress.getByName(master.getIp()),master.getPortaOuvinte());
+	public void conectar() throws IOException {
+        System.out.println("Conectando...");
+		socket = new Socket(InetAddress.getByName(master.getIp()), master.getPortaOuvinte());
+		//entrada = new ObjectInputStream(socket.getInputStream());
+		saida = new ObjectOutputStream(socket.getOutputStream());
+        System.out.println(String.format("Conectado no host %s, porta %s ", InetAddress.getByName(master.getIp()), master.getPortaOuvinte()));
 	}
 
 	public void enviar(Pacote pacote) throws IOException {
-		saida.writeObject(pacote);
+        System.out.println(String.format("Enviando o pacote %s ", pacote.toString()));
+        saida.writeObject(pacote);
 	}
 
 	public void enviar(List<Pacote> pacotes) throws IOException{
-
 		for(Pacote pacote : pacotes){
-			saida.writeObject(pacote);
+            enviar(pacote);
 		}
 	}
 
