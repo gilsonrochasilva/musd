@@ -53,4 +53,15 @@ public class ModeloMigracao {
 	public void setJanelaSincronizacao(List<JanelaSincronizacao> janelaSincronizacao) {
 		this.janelaSincronizacao = janelaSincronizacao;
 	}
+
+    @Override
+    public String toString() {
+        return "ModeloMigracao{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", slaves=" + slaves +
+                ", master=" + master +
+                ", janelaSincronizacao=" + janelaSincronizacao +
+                '}';
+    }
 }

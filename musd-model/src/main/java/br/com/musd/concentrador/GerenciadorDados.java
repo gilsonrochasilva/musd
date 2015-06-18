@@ -13,6 +13,10 @@ public class GerenciadorDados {
 
 	private DadosConexao dadosConexao;
 
+	public void salvar(Pacote pacote) {
+		System.out.print("Salvando pacote no banco de dados: " + pacote.toString());
+	}
+
 	public ConexaoSlave getConexaoSlave() {
 		return conexaoSlave;
 	}
