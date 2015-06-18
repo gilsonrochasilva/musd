@@ -1,7 +1,6 @@
 package br.com.musd.administrativo;
 
 import java.util.Date;
-import br.com.musd.sincronizacao.Sincronizador;
 
 public class JanelaSincronizacao {
 
@@ -11,7 +10,7 @@ public class JanelaSincronizacao {
 
 	private Date horaInicio;
 
-	private String horaFim;
+	private Date horaFim;
 
 	private Integer intervalo;
 
@@ -41,11 +40,11 @@ public class JanelaSincronizacao {
 		this.horaInicio = horaInicio;
 	}
 
-	public String getHoraFim() {
+	public Date getHoraFim() {
 		return horaFim;
 	}
 
-	public void setHoraFim(String horaFim) {
+	public void setHoraFim(Date horaFim) {
 		this.horaFim = horaFim;
 	}
 

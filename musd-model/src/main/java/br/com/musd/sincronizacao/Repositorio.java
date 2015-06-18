@@ -8,8 +8,6 @@ public class Repositorio {
 
 	private Collection<Pacote> pacote;
 
-	private Sincronizador sincronizador;
-
 	private void Repositorio() {
 
 	}
