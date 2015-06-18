@@ -50,7 +50,7 @@
       <module name="musd-concentrador" target="1.6" />
       <module name="musd-model" target="1.6" />
       <module name="musd-sincronizador" target="1.5" />
-      <module name="musd-web" target="1.6" />
+      <module name="musd-web" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
