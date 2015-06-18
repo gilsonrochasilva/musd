@@ -8,8 +8,6 @@ public class Host {
 
 	protected String ip;
 
-	protected ModeloMigracao modeloMigracao;
-
 	public Integer getId() {
 		return id;
 	}
@@ -32,13 +30,5 @@ public class Host {
 
 	public void setIp(String ip) {
 		this.ip = ip;
-	}
-
-	public ModeloMigracao getModeloMigracao() {
-		return modeloMigracao;
-	}
-
-	public void setModeloMigracao(ModeloMigracao modeloMigracao) {
-		this.modeloMigracao = modeloMigracao;
 	}
 }

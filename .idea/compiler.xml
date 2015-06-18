@@ -22,17 +22,35 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="musd-concentrador" />
-        <module name="musd-model" />
         <module name="musd-sincronizador" />
+      </profile>
+      <profile default="false" name="Annotation profile for musd-web" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
         <module name="musd-web" />
+      </profile>
+      <profile default="false" name="Annotation profile for musd-concentrador" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="musd-concentrador" />
+      </profile>
+      <profile default="false" name="Annotation profile for musd-model" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="musd-model" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="musd-concentrador" target="1.5" />
-      <module name="musd-model" target="1.5" />
+      <module name="musd-concentrador" target="1.6" />
+      <module name="musd-model" target="1.6" />
       <module name="musd-sincronizador" target="1.5" />
-      <module name="musd-web" target="1.6" />
+      <module name="musd-web" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

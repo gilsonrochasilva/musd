@@ -23,4 +23,12 @@ public class Pacote implements Serializable {
 	public void setChecksun(String checksun) {
 		this.checksun = checksun;
 	}
+
+	@Override
+	public String toString() {
+		return "Pacote{" +
+				"dados='" + dados + '\'' +
+				", checksun='" + checksun + '\'' +
+				'}';
+	}
 }
