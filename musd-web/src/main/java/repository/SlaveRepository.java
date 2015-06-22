@@ -11,8 +11,8 @@ import java.util.List;
  * Created by marcos on 17/06/15.
  */
 
-@ManagedBean
-@SessionScoped
+//@ManagedBean
+//@SessionScoped
 public class SlaveRepository {
 
     private List<Slave> slaveDB = new ArrayList<Slave>();

@@ -8,8 +8,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-@ManagedBean
-@SessionScoped
+//@ManagedBean
+//@SessionScoped
 public class MasterRepository implements Serializable{
 
     private List<Master> masterDB = new ArrayList<Master>();
