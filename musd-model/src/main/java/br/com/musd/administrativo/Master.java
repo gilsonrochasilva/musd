@@ -12,23 +12,14 @@ public class Master extends Host implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	@Basic(optional = false)
-	@Column(name = "portaMinima")
-	private int portaMinima;
+	@Column(name = "portaMinima", nullable = false)
+	private int portaMin;
 
-	@Basic(optional = false)
-	@Column(name = "portaMaxima")
-	private int portaMaxima;
+	@Column(name = "portaMaxima", nullable = false)
+	private int portaMax;
 
-	@Basic(optional = false)
-	@Column(name = "portaOuvinte")
+	@Column(name = "portaOuvinte", nullable = false)
 	private int portaOuvinte;
-
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "masterID")
-	private List<BancoDados> bancoDadosList;
-
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "masterID")
-	private List<DadosConexao> dadosConexaoList;
 
 	@JoinColumn(name = "modeloMigracao", referencedColumnName = "id")
 	@ManyToOne(optional = false)
@@ -37,30 +28,20 @@ public class Master extends Host implements Serializable {
 	public Master() {
 	}
 
-	public Master(Integer id) {
-
+	public int getPortaMin() {
+		return portaMin;
 	}
 
-	public Master(int portaMinima, int portaMaxima, int portaOuvinte) {
-		this.portaMinima = portaMinima;
-		this.portaMaxima = portaMaxima;
-		this.portaOuvinte = portaOuvinte;
+	public void setPortaMin(int portaMin) {
+		this.portaMin = portaMin;
 	}
 
-	public int getPortaMinima() {
-		return portaMinima;
+	public int getPortaMax() {
+		return portaMax;
 	}
 
-	public void setPortaMinima(int portaMinima) {
-		this.portaMinima = portaMinima;
-	}
-
-	public int getPortaMaxima() {
-		return portaMaxima;
-	}
-
-	public void setPortaMaxima(int portaMaxima) {
-		this.portaMaxima = portaMaxima;
+	public void setPortaMax(int portaMax) {
+		this.portaMax = portaMax;
 	}
 
 	public int getPortaOuvinte() {
@@ -69,22 +50,6 @@ public class Master extends Host implements Serializable {
 
 	public void setPortaOuvinte(int portaOuvinte) {
 		this.portaOuvinte = portaOuvinte;
-	}
-
-	public List<BancoDados> getBancoDadosList() {
-		return bancoDadosList;
-	}
-
-	public void setBancoDadosList(List<BancoDados> bancoDadosList) {
-		this.bancoDadosList = bancoDadosList;
-	}
-
-	public List<DadosConexao> getDadosConexaoList() {
-		return dadosConexaoList;
-	}
-
-	public void setDadosConexaoList(List<DadosConexao> dadosConexaoList) {
-		this.dadosConexaoList = dadosConexaoList;
 	}
 
 	public ModeloMigracao getModeloMigracao() {

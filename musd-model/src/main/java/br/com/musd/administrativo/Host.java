@@ -8,31 +8,19 @@ import java.io.Serializable;
 public abstract class Host implements Serializable{
 
 	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Basic(optional = false)
-	@Column(name = "id")
+	@Column(name = "id", nullable = false, unique = true)
 	private Integer id;
 
-	@Basic(optional = false)
-	@Column(name = "instancia")
+	@Column(name = "instancia", nullable = false, length = 50)
 	private String instancia;
 
-	@Basic(optional = false)
-	@Column(name = "ip")
+	@Column(name = "ip", nullable = false, length = 15)
 	private String ip;
 
 	public Host() {
-	}
-
-	public Host(Integer id) {
-		this.id = id;
-	}
-
-	public Host(Integer id, String instancia, String ip) {
-		this.id = id;
-		this.instancia = instancia;
-		this.ip = ip;
 	}
 
 	public Integer getId() {

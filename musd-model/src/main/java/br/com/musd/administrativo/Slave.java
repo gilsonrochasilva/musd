@@ -8,12 +8,14 @@ import java.util.Objects;
 @Table(name = "slave")
 @PrimaryKeyJoinColumn(referencedColumnName = "id")
 public class Slave extends Host implements Serializable {
+
 	private static final long serialVersionUID = 1L;
-	@Basic(optional = false)
-	@Column(name = "porta")
+
+	@Column(name = "porta", nullable = false)
 	private int porta;
-	@JoinColumn(name = "modeloMigracao", referencedColumnName = "id")
+
 	@ManyToOne(optional = false)
+	@JoinColumn(name = "modeloMigracao", referencedColumnName = "id")
 	private ModeloMigracao modeloMigracao;
 
 	public Slave() {

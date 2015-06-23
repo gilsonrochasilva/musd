@@ -11,25 +11,22 @@ public class JanelaSincronizacao implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Basic(optional = false)
-	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id", nullable = false, unique = true)
 	private Integer id;
 
-	@Basic(optional = false)
-	@Column(name = "identificacao")
+	@Column(name = "identificacao", nullable = false, length = 50)
 	private String identificacao;
 
-	@Basic(optional = false)
-	@Column(name = "horario")
 	@Temporal(TemporalType.DATE)
-	private Date horario;
+	@Column(name = "horario", nullable = false)
+	private Date horaIni;
 
-	@Basic(optional = false)
-	@Column(name = "horaFim")
-	private String horaFim;
+	@Temporal(TemporalType.DATE)
+	@Column(name = "horaFim", nullable = false)
+	private Date horaFim;
 
-	@Basic(optional = false)
-	@Column(name = "intervalo")
+	@Column(name = "intervalo", nullable = false)
 	private int intervalo;
 
 	@JoinColumn(name = "modeloMigracao", referencedColumnName = "id")
@@ -37,18 +34,6 @@ public class JanelaSincronizacao implements Serializable {
 	private ModeloMigracao modeloMigracao;
 
 	public JanelaSincronizacao() {
-	}
-
-	public JanelaSincronizacao(Integer id) {
-		this.id = id;
-	}
-
-	public JanelaSincronizacao(Integer id, String identificacao, Date horario, String horaFim, int intervalo) {
-		this.id = id;
-		this.identificacao = identificacao;
-		this.horario = horario;
-		this.horaFim = horaFim;
-		this.intervalo = intervalo;
 	}
 
 	public Integer getId() {
@@ -67,19 +52,19 @@ public class JanelaSincronizacao implements Serializable {
 		this.identificacao = identificacao;
 	}
 
-	public Date getHorario() {
-		return horario;
+	public Date getHoraIni() {
+		return horaIni;
 	}
 
-	public void setHorario(Date horario) {
-		this.horario = horario;
+	public void setHoraIni(Date horaIni) {
+		this.horaIni = horaIni;
 	}
 
-	public String getHoraFim() {
+	public Date getHoraFim() {
 		return horaFim;
 	}
 
-	public void setHoraFim(String horaFim) {
+	public void setHoraFim(Date horaFim) {
 		this.horaFim = horaFim;
 	}
 

@@ -10,52 +10,34 @@ public class DadosConexao implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Basic(optional = false)
-	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id", nullable = false, unique = true)
 	private Integer id;
 
-	@Basic(optional = false)
-	@Column(name = "host")
+	@Column(name = "host", nullable = false, length = 15)
 	private String host;
 
-	@Basic(optional = false)
-	@Column(name = "porta")
+	@Column(name = "porta", nullable = false)
 	private int porta;
 
-	@Basic(optional = false)
-	@Column(name = "usuario")
+	@Column(name = "usuario", nullable = false, length = 50)
 	private String usuario;
 
-	@Basic(optional = false)
-	@Column(name = "senha")
+	@Column(name = "senha", nullable = false, length = 100)
 	private String senha;
 
-	@Basic(optional = false)
-	@Column(name = "driver")
+	@Column(name = "driver", nullable = false, length = 100)
 	private String driver;
 
-	@JoinColumn(name = "bancoDadosID", referencedColumnName = "id")
 	@ManyToOne(optional = false)
-	private BancoDados bancoDadosID;
+	@JoinColumn(name = "banco_dados", referencedColumnName = "id")
+	private BancoDados bancoDados;
 
-	@JoinColumn(name = "masterID", referencedColumnName = "id")
 	@ManyToOne(optional = false)
-	private Master masterID;
+	@JoinColumn(name = "master", referencedColumnName = "id")
+	private Master master;
 
 	public DadosConexao() {
-	}
-
-	public DadosConexao(Integer id) {
-		this.id = id;
-	}
-
-	public DadosConexao(Integer id, String host, int porta, String usuario, String senha, String driver) {
-		this.id = id;
-		this.host = host;
-		this.porta = porta;
-		this.usuario = usuario;
-		this.senha = senha;
-		this.driver = driver;
 	}
 
 	public Integer getId() {
@@ -106,20 +88,20 @@ public class DadosConexao implements Serializable {
 		this.driver = driver;
 	}
 
-	public BancoDados getBancoDadosID() {
-		return bancoDadosID;
+	public BancoDados getBancoDados() {
+		return bancoDados;
 	}
 
-	public void setBancoDadosID(BancoDados bancoDadosID) {
-		this.bancoDadosID = bancoDadosID;
+	public void setBancoDados(BancoDados bancoDados) {
+		this.bancoDados = bancoDados;
 	}
 
-	public Master getMasterID() {
-		return masterID;
+	public Master getMaster() {
+		return master;
 	}
 
-	public void setMasterID(Master masterID) {
-		this.masterID = masterID;
+	public void setMaster(Master master) {
+		this.master = master;
 	}
 
 	@Override
@@ -143,7 +125,7 @@ public class DadosConexao implements Serializable {
 
 	@Override
 	public String toString() {
-		return "entity.DadosConexao[ id=" + id + " ]";
+		return "DadosConexao[ id=" + id + " ]";
 	}
 
 }

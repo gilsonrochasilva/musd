@@ -2,7 +2,6 @@ package br.com.musd.administrativo;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 
 @Entity
 @Table(name = "modelo_migracao")
@@ -19,25 +18,7 @@ public class ModeloMigracao implements Serializable {
 	@Column(name = "nome")
 	private String nome;
 
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "modeloMigracao")
-	private List<Slave> slaveList;
-
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "modeloMigracao")
-	private List<JanelaSincronizacao> janelaSincronizacaoList;
-
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "modeloMigracao")
-	private List<Master> masterList;
-
 	public ModeloMigracao() {
-	}
-
-	public ModeloMigracao(Integer id) {
-		this.id = id;
-	}
-
-	public ModeloMigracao(Integer id, String nome) {
-		this.id = id;
-		this.nome = nome;
 	}
 
 	public Integer getId() {
@@ -54,30 +35,6 @@ public class ModeloMigracao implements Serializable {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public List<Slave> getSlaveList() {
-		return slaveList;
-	}
-
-	public void setSlaveList(List<Slave> slaveList) {
-		this.slaveList = slaveList;
-	}
-
-	public List<JanelaSincronizacao> getJanelaSincronizacaoList() {
-		return janelaSincronizacaoList;
-	}
-
-	public void setJanelaSincronizacaoList(List<JanelaSincronizacao> janelaSincronizacaoList) {
-		this.janelaSincronizacaoList = janelaSincronizacaoList;
-	}
-
-	public List<Master> getMasterList() {
-		return masterList;
-	}
-
-	public void setMasterList(List<Master> masterList) {
-		this.masterList = masterList;
 	}
 
 	@Override
