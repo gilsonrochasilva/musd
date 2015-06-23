@@ -1,26 +1,54 @@
 package br.com.musd.administrativo;
 
+import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
-public class JanelaSincronizacao {
-
-	private String id;
-
+@Entity
+@Table(name = "janela_sincronizacao")
+public class JanelaSincronizacao implements Serializable {
+	private static final long serialVersionUID = 1L;
+	@Id
+	@Basic(optional = false)
+	@Column(name = "id")
+	private Integer id;
+	@Basic(optional = false)
+	@Column(name = "identificacao")
 	private String identificacao;
-
-	private Date horaInicio;
-
-	private Date horaFim;
-
-	private Integer intervalo;
-
+	@Basic(optional = false)
+	@Column(name = "horario")
+	@Temporal(TemporalType.DATE)
+	private Date horario;
+	@Basic(optional = false)
+	@Column(name = "horaFim")
+	private String horaFim;
+	@Basic(optional = false)
+	@Column(name = "intervalo")
+	private int intervalo;
+	@JoinColumn(name = "modeloMigracao", referencedColumnName = "id")
+	@ManyToOne(optional = false)
 	private ModeloMigracao modeloMigracao;
 
-	public String getId() {
+	public JanelaSincronizacao() {
+	}
+
+	public JanelaSincronizacao(Integer id) {
+		this.id = id;
+	}
+
+	public JanelaSincronizacao(Integer id, String identificacao, Date horario, String horaFim, int intervalo) {
+		this.id = id;
+		this.identificacao = identificacao;
+		this.horario = horario;
+		this.horaFim = horaFim;
+		this.intervalo = intervalo;
+	}
+
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -32,27 +60,27 @@ public class JanelaSincronizacao {
 		this.identificacao = identificacao;
 	}
 
-	public Date getHoraInicio() {
-		return horaInicio;
+	public Date getHorario() {
+		return horario;
 	}
 
-	public void setHoraInicio(Date horaInicio) {
-		this.horaInicio = horaInicio;
+	public void setHorario(Date horario) {
+		this.horario = horario;
 	}
 
-	public Date getHoraFim() {
+	public String getHoraFim() {
 		return horaFim;
 	}
 
-	public void setHoraFim(Date horaFim) {
+	public void setHoraFim(String horaFim) {
 		this.horaFim = horaFim;
 	}
 
-	public Integer getIntervalo() {
+	public int getIntervalo() {
 		return intervalo;
 	}
 
-	public void setIntervalo(Integer intervalo) {
+	public void setIntervalo(int intervalo) {
 		this.intervalo = intervalo;
 	}
 
@@ -63,4 +91,24 @@ public class JanelaSincronizacao {
 	public void setModeloMigracao(ModeloMigracao modeloMigracao) {
 		this.modeloMigracao = modeloMigracao;
 	}
+
+	@Override
+	public int hashCode() {
+		int hash = 0;
+		hash += (id != null ? id.hashCode() : 0);
+		return hash;
+	}
+
+	@Override
+	public boolean equals(Object object) {
+		if (!(object instanceof JanelaSincronizacao)) {
+			return false;
+		}
+		JanelaSincronizacao other = (JanelaSincronizacao) object;
+		if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+			return false;
+		}
+		return true;
+	}
+
 }
