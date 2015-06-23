@@ -11,7 +11,7 @@ import java.util.List;
 @SuppressWarnings("unchecked")
 public abstract class DAO<T> implements DAOLocal<T> {
 
-	@PersistenceContext(unitName = "modernizacaoPU")
+	@PersistenceContext(unitName = "musdPU")
 	private EntityManager em;
 
 	@Override
