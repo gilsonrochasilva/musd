@@ -1,18 +1,44 @@
 package br.com.musd.administrativo;
 
+import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
-public class ModeloMigracao {
+@Entity
+@Table(name = "modelo_migracao")
+public class ModeloMigracao implements Serializable {
 
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@Basic(optional = false)
+	@Column(name = "id")
 	private Integer id;
 
+	@Basic(optional = false)
+	@Column(name = "nome")
 	private String nome;
 
-	private List<Slave> slaves;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "modeloMigracao")
+	private List<Slave> slaveList;
 
-	private Master master;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "modeloMigracao")
+	private List<JanelaSincronizacao> janelaSincronizacaoList;
 
-	private List<JanelaSincronizacao> janelaSincronizacao;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "modeloMigracao")
+	private List<Master> masterList;
+
+	public ModeloMigracao() {
+	}
+
+	public ModeloMigracao(Integer id) {
+		this.id = id;
+	}
+
+	public ModeloMigracao(Integer id, String nome) {
+		this.id = id;
+		this.nome = nome;
+	}
 
 	public Integer getId() {
 		return id;
@@ -30,38 +56,47 @@ public class ModeloMigracao {
 		this.nome = nome;
 	}
 
-	public List<Slave> getSlaves() {
-		return slaves;
+	public List<Slave> getSlaveList() {
+		return slaveList;
 	}
 
-	public void setSlaves(List<Slave> slaves) {
-		this.slaves = slaves;
+	public void setSlaveList(List<Slave> slaveList) {
+		this.slaveList = slaveList;
 	}
 
-	public Master getMaster() {
-		return master;
+	public List<JanelaSincronizacao> getJanelaSincronizacaoList() {
+		return janelaSincronizacaoList;
 	}
 
-	public void setMaster(Master master) {
-		this.master = master;
+	public void setJanelaSincronizacaoList(List<JanelaSincronizacao> janelaSincronizacaoList) {
+		this.janelaSincronizacaoList = janelaSincronizacaoList;
 	}
 
-	public List<JanelaSincronizacao> getJanelaSincronizacao() {
-		return janelaSincronizacao;
+	public List<Master> getMasterList() {
+		return masterList;
 	}
 
-	public void setJanelaSincronizacao(List<JanelaSincronizacao> janelaSincronizacao) {
-		this.janelaSincronizacao = janelaSincronizacao;
+	public void setMasterList(List<Master> masterList) {
+		this.masterList = masterList;
 	}
 
-    @Override
-    public String toString() {
-        return "ModeloMigracao{" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                ", slaves=" + slaves +
-                ", master=" + master +
-                ", janelaSincronizacao=" + janelaSincronizacao +
-                '}';
-    }
+	@Override
+	public int hashCode() {
+		int hash = 0;
+		hash += (id != null ? id.hashCode() : 0);
+		return hash;
+	}
+
+	@Override
+	public boolean equals(Object object) {
+		if (!(object instanceof ModeloMigracao)) {
+			return false;
+		}
+		ModeloMigracao other = (ModeloMigracao) object;
+		if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+			return false;
+		}
+		return true;
+	}
+
 }

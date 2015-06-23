@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          id="RegulaTaxi" version="3.0">
 
-    <display-name>Regulamentação de Táxi</display-name>
+    <display-name>M.U.S.D</display-name>
 
     <!-- Change to "Production" when you are ready to deploy -->
     <context-param>
@@ -48,13 +48,13 @@
 
     <context-param>
         <param-name>com.ocpsoft.pretty.DEVELOPMENT</param-name>
-        <param-value>true</param-value>
-        <!--<param-value>false</param-value>-->
+        <!--<param-value>true</param-value>-->
+        <param-value>false</param-value>
     </context-param>
 
     <context-param>
         <param-name>com.ocpsoft.pretty.BASE_PACKAGES</param-name>
-        <param-value>br.com.cinbesa.regulataxi.mb</param-value>
+        <param-value>mb</param-value>
     </context-param>
 
     <context-param>
