@@ -8,6 +8,9 @@ import java.io.ObjectInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * Created by gilson on 17/06/15.
+ */
 public class ConexaoSlave implements Runnable {
 
 	private int porta;

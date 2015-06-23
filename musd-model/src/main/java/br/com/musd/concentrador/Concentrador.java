@@ -5,6 +5,9 @@ import br.com.musd.administrativo.ModeloMigracao;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Created by gilson on 17/06/15.
+ */
 public class Concentrador {
 
 	private int portaMaxima;
