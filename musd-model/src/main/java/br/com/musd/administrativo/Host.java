@@ -13,9 +13,11 @@ public abstract class Host implements Serializable{
 	@Basic(optional = false)
 	@Column(name = "id")
 	private Integer id;
+
 	@Basic(optional = false)
 	@Column(name = "instancia")
 	private String instancia;
+
 	@Basic(optional = false)
 	@Column(name = "ip")
 	private String ip;

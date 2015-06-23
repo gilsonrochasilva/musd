@@ -6,29 +6,38 @@ import java.io.Serializable;
 @Entity
 @Table(name = "dados_conexao")
 public class DadosConexao implements Serializable {
+
 	private static final long serialVersionUID = 1L;
+
 	@Id
 	@Basic(optional = false)
 	@Column(name = "id")
 	private Integer id;
+
 	@Basic(optional = false)
 	@Column(name = "host")
 	private String host;
+
 	@Basic(optional = false)
 	@Column(name = "porta")
 	private int porta;
+
 	@Basic(optional = false)
 	@Column(name = "usuario")
 	private String usuario;
+
 	@Basic(optional = false)
 	@Column(name = "senha")
 	private String senha;
+
 	@Basic(optional = false)
 	@Column(name = "driver")
 	private String driver;
+
 	@JoinColumn(name = "bancoDadosID", referencedColumnName = "id")
 	@ManyToOne(optional = false)
 	private BancoDados bancoDadosID;
+
 	@JoinColumn(name = "masterID", referencedColumnName = "id")
 	@ManyToOne(optional = false)
 	private Master masterID;

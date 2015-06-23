@@ -1,7 +1,6 @@
 package br.com.musd.administrativo;
 
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlTransient;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
@@ -10,21 +9,27 @@ import java.util.Objects;
 @Table(name = "master")
 @PrimaryKeyJoinColumn(referencedColumnName = "id")
 public class Master extends Host implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 
 	@Basic(optional = false)
 	@Column(name = "portaMinima")
 	private int portaMinima;
+
 	@Basic(optional = false)
 	@Column(name = "portaMaxima")
 	private int portaMaxima;
+
 	@Basic(optional = false)
 	@Column(name = "portaOuvinte")
 	private int portaOuvinte;
+
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "masterID")
 	private List<BancoDados> bancoDadosList;
+
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "masterID")
 	private List<DadosConexao> dadosConexaoList;
+
 	@JoinColumn(name = "modeloMigracao", referencedColumnName = "id")
 	@ManyToOne(optional = false)
 	private ModeloMigracao modeloMigracao;

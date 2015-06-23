@@ -7,18 +7,24 @@ import java.util.List;
 @Entity
 @Table(name = "modelo_migracao")
 public class ModeloMigracao implements Serializable {
+
 	private static final long serialVersionUID = 1L;
+
 	@Id
 	@Basic(optional = false)
 	@Column(name = "id")
 	private Integer id;
+
 	@Basic(optional = false)
 	@Column(name = "nome")
 	private String nome;
+
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "modeloMigracao")
 	private List<Slave> slaveList;
+
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "modeloMigracao")
 	private List<JanelaSincronizacao> janelaSincronizacaoList;
+
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "modeloMigracao")
 	private List<Master> masterList;
 

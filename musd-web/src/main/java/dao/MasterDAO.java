@@ -1,7 +1,6 @@
 package dao;
 
 import br.com.musd.administrativo.Master;
-import repository.MasterRepository;
 
 import javax.inject.Inject;
 import java.util.List;

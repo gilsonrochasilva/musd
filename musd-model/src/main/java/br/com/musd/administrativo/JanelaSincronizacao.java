@@ -7,24 +7,31 @@ import java.util.Date;
 @Entity
 @Table(name = "janela_sincronizacao")
 public class JanelaSincronizacao implements Serializable {
+
 	private static final long serialVersionUID = 1L;
+
 	@Id
 	@Basic(optional = false)
 	@Column(name = "id")
 	private Integer id;
+
 	@Basic(optional = false)
 	@Column(name = "identificacao")
 	private String identificacao;
+
 	@Basic(optional = false)
 	@Column(name = "horario")
 	@Temporal(TemporalType.DATE)
 	private Date horario;
+
 	@Basic(optional = false)
 	@Column(name = "horaFim")
 	private String horaFim;
+
 	@Basic(optional = false)
 	@Column(name = "intervalo")
 	private int intervalo;
+
 	@JoinColumn(name = "modeloMigracao", referencedColumnName = "id")
 	@ManyToOne(optional = false)
 	private ModeloMigracao modeloMigracao;
