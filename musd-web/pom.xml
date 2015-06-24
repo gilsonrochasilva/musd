@@ -9,12 +9,6 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <properties>
-        <!--<version.javaee>6.0</version.javaee>-->
-        <version.prettyfaces>3.3.3</version.prettyfaces>
-        <version.primefaces>5.1</version.primefaces>
-    </properties>
-
     <build>
         <pluginManagement>
             <plugins>
@@ -45,19 +39,19 @@
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
             <version>7.0</version>
-            <!--<scope>provided</scope>-->
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>com.ocpsoft</groupId>
             <artifactId>prettyfaces-jsf2</artifactId>
-            <version>${version.prettyfaces}</version>
+            <version>3.3.3</version>
         </dependency>
 
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
-            <version>${version.primefaces}</version>
+            <version>5.2</version>
         </dependency>
 
         <dependency>
@@ -88,13 +82,6 @@
             <groupId>net.sourceforge.barbecue</groupId>
             <artifactId>barbecue</artifactId>
             <version>1.5-beta1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>4.0.1.Final</version>
-            <!--<scope>provided</scope>-->
         </dependency>
 
         <dependency>

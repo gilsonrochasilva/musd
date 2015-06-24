@@ -18,7 +18,7 @@
     </session-config>
 
     <welcome-file-list>
-        <welcome-file>index.html</welcome-file>
+        <welcome-file>pages/index.xhtml</welcome-file>
     </welcome-file-list>
 
     <!-- JSF mapping -->
@@ -48,8 +48,8 @@
 
     <context-param>
         <param-name>com.ocpsoft.pretty.DEVELOPMENT</param-name>
-        <!--<param-value>true</param-value>-->
-        <param-value>false</param-value>
+        <param-value>true</param-value>
+        <!--<param-value>false</param-value>-->
     </context-param>
 
     <context-param>

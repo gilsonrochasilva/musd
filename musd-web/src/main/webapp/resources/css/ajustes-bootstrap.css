@@ -1,0 +1,19 @@
+#formBusca.navbar-right{
+    margin-right: -35px !important;
+}
+
+.zera-margin-left{
+    margin-left: -15px !important;
+}
+
+.zera-margin-left{
+    margin-right: -15px !important;
+}
+
+input[type="radio"], input[type="checkbox"]{
+    margin: 0px 5px 20px 0px !important;
+}
+
+.navbar {
+    border-radius: 0px !important;
+}

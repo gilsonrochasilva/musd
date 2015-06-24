@@ -1,0 +1,27 @@
+.ui-radiobutton{
+    margin: auto 10px !important;
+    padding: 5px !important;
+}
+
+.ui-radiobutton-icon {
+    margin: -1px !important;
+    margin-left: 0px !important;
+}
+
+/*Filtro campor DataTable*/
+.ui-datatable .ui-column-filter{
+    width: 90% !important;
+}
+
+.ui-selectonemenu .ui-selectonemenu-trigger {
+    width: 25px !important;
+    padding: 0px 3px !important;
+}
+
+.ui-selectonemenu .ui-selectonemenu-trigger .ui-icon {
+    margin-top: 7px !important;
+}
+
+.ui-growl{
+    margin-top: 50px !important;
+}
