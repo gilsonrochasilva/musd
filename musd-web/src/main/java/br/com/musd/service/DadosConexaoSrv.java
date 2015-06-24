@@ -1,6 +1,5 @@
-package service;
+package br.com.musd.service;
 
-import br.com.musd.administrativo.BancoDados;
 import br.com.musd.administrativo.DadosConexao;
 import dao.DadosConexaoDAO;
 

@@ -1,9 +1,7 @@
-package service;
+package br.com.musd.service;
 
-import br.com.musd.administrativo.DadosConexao;
 import br.com.musd.administrativo.JanelaSincronizacao;
-import dao.DadosConexaoDAO;
-import dao.JanelaSincronizacaoDAO;
+import br.com.musd.dao.JanelaSincronizacaoDAO;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;

@@ -1,8 +1,6 @@
-package service;
+package br.com.musd.service;
 
-import br.com.musd.administrativo.DadosConexao;
 import br.com.musd.administrativo.ModeloMigracao;
-import dao.DadosConexaoDAO;
 import dao.ModeloMigracaoDAO;
 
 import javax.ejb.Stateless;
@@ -15,6 +13,7 @@ import java.util.List;
 
 @Stateless
 public class ModeloMigracaoSrv {
+
     @Inject
     private ModeloMigracaoDAO modeloMigracaoDAO;
 

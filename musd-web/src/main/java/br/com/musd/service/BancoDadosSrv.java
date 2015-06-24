@@ -1,9 +1,7 @@
-package service;
+package br.com.musd.service;
 
 import br.com.musd.administrativo.BancoDados;
-import br.com.musd.administrativo.Master;
 import dao.BancoDadosDAO;
-import dao.MasterDAO;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
