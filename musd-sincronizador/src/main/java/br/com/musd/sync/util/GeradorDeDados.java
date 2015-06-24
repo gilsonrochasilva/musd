@@ -13,10 +13,11 @@ public class GeradorDeDados {
 
     public static List<Pacote> geradorDePacote(Integer qtd){
         List<Pacote> pacotes = new ArrayList<Pacote>();
-        Pacote pacote = new Pacote();
+
         Random geradorNumeros = new Random();
 
         for(int i = 1; i < qtd; i++){
+            Pacote pacote = new Pacote();
             pacote.setDados(String.valueOf(geradorNumeros.nextInt()*i));
             pacote.setChecksun(String.valueOf(geradorNumeros.nextInt() * i));
 

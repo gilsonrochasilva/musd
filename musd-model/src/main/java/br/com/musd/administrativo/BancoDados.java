@@ -7,17 +7,22 @@ import java.util.List;
 @Entity
 @Table(name = "banco_dados")
 public class BancoDados implements Serializable {
+
 	private static final long serialVersionUID = 1L;
+
 	@Id
 	@Basic(optional = false)
 	@Column(name = "id")
 	private Integer id;
+
 	@Basic(optional = false)
 	@Column(name = "nome")
 	private String nome;
+
 	@JoinColumn(name = "masterID", referencedColumnName = "id")
 	@ManyToOne(optional = false)
 	private Master masterID;
+
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "bancoDadosID")
 	private List<DadosConexao> dadosConexaoList;
 

@@ -5,6 +5,9 @@ import br.com.musd.sincronizacao.Pacote;
 
 import java.util.List;
 
+/**
+ * Created by gilson on 17/06/15.
+ */
 public class GerenciadorDados {
 
 	private ConexaoSlave conexaoSlave;
@@ -14,7 +17,7 @@ public class GerenciadorDados {
 	private DadosConexao dadosConexao;
 
 	public void salvar(Pacote pacote) {
-		System.out.print("Salvando pacote no banco de dados: " + pacote.toString());
+		System.out.println("Salvando pacote no banco de dados: " + pacote.toString());
 	}
 
 	public ConexaoSlave getConexaoSlave() {
