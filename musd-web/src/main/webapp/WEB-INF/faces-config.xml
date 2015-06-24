@@ -5,7 +5,7 @@
     http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
 
     <application>
-        <action-listener>mb.common.MusdActionListener</action-listener>
+        <action-listener>br.com.musd.mb.common.MusdActionListener</action-listener>
         <locale-config>
             <default-locale>pt_BR</default-locale>
         </locale-config>

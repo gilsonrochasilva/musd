@@ -19,17 +19,17 @@ public class JanelaSincronizacao implements Serializable {
 	private String identificacao;
 
 	@Temporal(TemporalType.DATE)
-	@Column(name = "horario", nullable = false)
-	private Date horaIni;
+	@Column(name = "hora_inicio", nullable= false)
+	private Date horaInicio;
 
 	@Temporal(TemporalType.DATE)
-	@Column(name = "horaFim", nullable = false)
+	@Column(name = "hora_fim", nullable = false)
 	private Date horaFim;
 
 	@Column(name = "intervalo", nullable = false)
 	private int intervalo;
 
-	@JoinColumn(name = "modeloMigracao", referencedColumnName = "id")
+	@JoinColumn(name = "modelo_migracao_id", referencedColumnName = "id")
 	@ManyToOne(optional = false)
 	private ModeloMigracao modeloMigracao;
 
@@ -52,12 +52,12 @@ public class JanelaSincronizacao implements Serializable {
 		this.identificacao = identificacao;
 	}
 
-	public Date getHoraIni() {
-		return horaIni;
+	public Date getHoraInicio() {
+		return horaInicio;
 	}
 
-	public void setHoraIni(Date horaIni) {
-		this.horaIni = horaIni;
+	public void setHoraInicio(Date horaInicio) {
+		this.horaInicio = horaInicio;
 	}
 
 	public Date getHoraFim() {
