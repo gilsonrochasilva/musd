@@ -5,49 +5,65 @@
                 template="./../WEB-INF/template/default.xhtml">
 
     <ui:define name="content-page">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Modelo de Migração</h1>
-                <div class="form-horizontal">
-                    <div class="form-group">
-                        <h:outputLabel for="nomeModelo" styleClass="col-sm-2 control-label"></h:outputLabel>
-                        <div class="col-sm-10">
-                            <h:inputText id="nomeModelo" styleClass="form-control" value="#{modeloFormBean.modeloMigracao.nome}" required="true"></h:inputText>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <h2>Master</h2>
-                <div class="form-horizontal">
-                    <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-                        <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email"></input>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-                        <div class="col-sm-10">
-                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password"></input>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox"> Remember me</input>
-                                </label>
+        <h:form prependId="false">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Modelo de Migração</h1>
+                    <br></br>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <h:outputLabel for="nomeModelo" styleClass="col-sm-2 control-label" value="Nome do Modelo:"></h:outputLabel>
+                            <div class="col-sm-10">
+                                <h:inputText id="nomeModelo" styleClass="form-control" value="#{modeloFormBean.modeloMigracao.nome}" required="true"></h:inputText>
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-default">Sign in</button>
+                </div>
+                <div class="col-md-12">
+                    <h3>Master</h3>
+                    <br></br>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <h:outputLabel for="instancia" styleClass="col-sm-2 control-label" value="Nome da Instância:"></h:outputLabel>
+                            <div class="col-sm-10">
+                                <h:inputText id="instancia" styleClass="form-control" value="#{modeloFormBean.master.instancia}" required="true"></h:inputText>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <h:outputLabel for="ip" styleClass="col-sm-2 control-label" value="IP:"></h:outputLabel>
+                            <div class="col-sm-10">
+                                <h:inputText id="ip" styleClass="form-control" value="#{modeloFormBean.master.ip}" required="true"></h:inputText>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <h:outputLabel for="portaOuvinte" styleClass="col-sm-2 control-label" value="Porta Ouvinte:"></h:outputLabel>
+                            <div class="col-sm-10">
+                                <h:inputText id="portaOuvinte" styleClass="form-control" value="#{modeloFormBean.master.portaOuvinte}" required="true"></h:inputText>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <h:outputLabel for="portaMin" styleClass="col-sm-2 control-label" value="Porta Mínima:"></h:outputLabel>
+                            <div class="col-sm-10">
+                                <h:inputText id="portaMin" styleClass="form-control" value="#{modeloFormBean.master.portaMin}" required="true"></h:inputText>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <h:outputLabel for="portaMax" styleClass="col-sm-2 control-label" value="Porta Máxima:"></h:outputLabel>
+                            <div class="col-sm-10">
+                                <h:inputText id="portaMax" styleClass="form-control" value="#{modeloFormBean.master.portaMax}" required="true"></h:inputText>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-12">
+                    <h:button value="Voltar"></h:button>
+                    <h:commandButton value="Salvar" styleClass="ui-priority-primary" action="#{modeloFormBean.salvar}"></h:commandButton>
+                </div>
             </div>
-        </div>
+        </h:form>
     </ui:define>
 </ui:composition>
