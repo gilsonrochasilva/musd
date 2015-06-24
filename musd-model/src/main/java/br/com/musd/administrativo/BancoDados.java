@@ -23,7 +23,7 @@ public class BancoDados implements Serializable {
 	@ManyToOne(optional = false)
 	private Master masterID;
 
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "bancoDadosID")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "bancoDados")
 	private List<DadosConexao> dadosConexaoList;
 
 	public BancoDados() {
