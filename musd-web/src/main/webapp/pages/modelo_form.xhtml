@@ -10,10 +10,9 @@
                 <h1>Modelo de Migração</h1>
                 <div class="form-horizontal">
                     <div class="form-group">
-                        <label for="nomeModelo" class="col-sm-2 control-label" jsfc="h:label">Nome do Modelo:</label>
-                        <h:label></h:label>
+                        <h:outputLabel for="nomeModelo" styleClass="col-sm-2 control-label"></h:outputLabel>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control" id="nomeModelo" placeholder="Email" ></input>
+                            <h:inputText id="nomeModelo" styleClass="form-control" value="#{modeloFormBean.modeloMigracao.nome}" required="true"></h:inputText>
                         </div>
                     </div>
                 </div>

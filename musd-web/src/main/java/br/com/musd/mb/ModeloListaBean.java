@@ -8,6 +8,7 @@ import com.ocpsoft.pretty.faces.annotation.URLMappings;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
+import java.util.List;
 
 /**
  * Created by correa on 24/06/15.
@@ -15,22 +16,14 @@ import javax.faces.bean.ViewScoped;
 @ManagedBean
 @ViewScoped
 @URLMappings(mappings = {
-    @URLMapping(id = "novoModelo", pattern = "/modelo/novo", viewId = "/pages/modelo_form.jsf")
+    @URLMapping(id = "listaModelo", pattern = "/modelo/lista", viewId = "/pages/index.jsf")
 })
-public class ModeloFormBean extends PaginaBean {
+public class ModeloListaBean extends PaginaBean {
 
-    private ModeloMigracao modeloMigracao;
+    private List<ModeloMigracao> modelosMigracao;
 
-    @URLAction(mappingId = "novoModelo")
+    @URLAction(mappingId = "listaModelo")
     public void init() {
-        modeloMigracao = new ModeloMigracao();
-    }
 
-    public ModeloMigracao getModeloMigracao() {
-        return modeloMigracao;
-    }
-
-    public void setModeloMigracao(ModeloMigracao modeloMigracao) {
-        this.modeloMigracao = modeloMigracao;
     }
 }

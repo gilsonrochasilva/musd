@@ -1,7 +1,7 @@
 package br.com.musd.service;
 
 import br.com.musd.administrativo.ModeloMigracao;
-import dao.ModeloMigracaoDAO;
+import br.com.musd.dao.ModeloMigracaoDAO;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;

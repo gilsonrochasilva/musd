@@ -1,7 +1,7 @@
 package br.com.musd.service;
 
 import br.com.musd.administrativo.Master;
-import dao.MasterDAO;
+import br.com.musd.dao.MasterDAO;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;

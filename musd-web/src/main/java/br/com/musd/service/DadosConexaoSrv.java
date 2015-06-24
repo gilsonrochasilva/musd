@@ -1,7 +1,7 @@
 package br.com.musd.service;
 
 import br.com.musd.administrativo.DadosConexao;
-import dao.DadosConexaoDAO;
+import br.com.musd.dao.DadosConexaoDAO;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
