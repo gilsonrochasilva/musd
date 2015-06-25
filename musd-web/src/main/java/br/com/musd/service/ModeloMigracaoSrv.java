@@ -1,5 +1,6 @@
 package br.com.musd.service;
 
+import br.com.musd.administrativo.Host;
 import br.com.musd.administrativo.Master;
 import br.com.musd.administrativo.ModeloMigracao;
 import br.com.musd.administrativo.Slave;
@@ -50,10 +51,14 @@ public class ModeloMigracaoSrv {
     }
 
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
-    public void salvar(ModeloMigracao modeloMigracao, Master master) {
+    public void salvar(ModeloMigracao modeloMigracao, Host host) {
         salvar(modeloMigracao);
 
-        master.setModeloMigracao(modeloMigracao);
-        masterDAO.salvar(master);
+        if (host instanceof Master){
+            ((Master) host).setModeloMigracao(modeloMigracao);
+            masterDAO.salvar((Master) host);
+
+        }
+
     }
 }

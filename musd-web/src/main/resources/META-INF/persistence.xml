@@ -7,22 +7,23 @@
 	<persistence-unit name="musdPU" transaction-type="JTA">
 
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		<class>br.com.musd.administrativo.Master</class>
-		<class>br.com.musd.administrativo.Host</class>
-		<class>br.com.musd.administrativo.JanelaSincronizacao</class>
-		<class>br.com.musd.administrativo.BancoDados</class>
-		<class>br.com.musd.administrativo.ModeloMigracao</class>
-		<class>br.com.musd.administrativo.Slave</class>
-		<class>br.com.musd.administrativo.DadosConexao</class>
 
 		<jta-data-source>java:jboss/datasources/musdDS</jta-data-source>
+
+		<class>br.com.musd.administrativo.BancoDados</class>
+		<class>br.com.musd.administrativo.DadosConexao</class>
+		<class>br.com.musd.administrativo.Host</class>
+		<class>br.com.musd.administrativo.Master</class>
+		<class>br.com.musd.administrativo.Slave</class>
+		<class>br.com.musd.administrativo.JanelaSincronizacao</class>
+		<class>br.com.musd.administrativo.ModeloMigracao</class>
 
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 			<property name="hibernate.show_sql" value="false" />
 			<property name="hibernate.format_sql" value="false" />
-			<property name="hibernate.hbm2ddl.auto" value="validate"/>
+			<property name="hibernate.hbm2ddl.auto" value="create"/>
 		</properties>
 	</persistence-unit>
 
