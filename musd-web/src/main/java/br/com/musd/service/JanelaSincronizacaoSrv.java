@@ -4,12 +4,10 @@ import br.com.musd.administrativo.JanelaSincronizacao;
 import br.com.musd.dao.JanelaSincronizacaoDAO;
 
 import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
 import javax.inject.Inject;
 import java.util.List;
-
-/**
- * Created by marcos on 24/06/15.
- */
 
 @Stateless
 public class JanelaSincronizacaoSrv {
@@ -17,22 +15,23 @@ public class JanelaSincronizacaoSrv {
     @Inject
     private JanelaSincronizacaoDAO janelaSincronizacaoDAO;
 
-    public JanelaSincronizacao getUm(Integer id) {
+    public JanelaSincronizacao obterPorId(Integer id) {
         return janelaSincronizacaoDAO.getUm(id, JanelaSincronizacao.class);
     }
 
-    public List<JanelaSincronizacao> listarTodos(){
+    public List<JanelaSincronizacao> obterTodos(){
         return janelaSincronizacaoDAO.listar(JanelaSincronizacao.class);
     }
 
+    @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
     public void atualizar(JanelaSincronizacao janelaSincronizacao)
     {
         janelaSincronizacaoDAO.atualizar(janelaSincronizacao);
     }
 
-    public void salvar(JanelaSincronizacao janelaSincronizacao)
-    {
-        janelaSincronizacaoDAO.salvar(janelaSincronizacao);
+    @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+    public void salvar(JanelaSincronizacao janelaSincronizacao) {
+        salvar(janelaSincronizacao);
     }
 
 }
