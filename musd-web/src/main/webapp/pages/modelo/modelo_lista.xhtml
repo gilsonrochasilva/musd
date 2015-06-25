@@ -1,7 +1,9 @@
 <ui:composition template="../../WEB-INF/template/default.xhtml"
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 xmlns="http://www.w3.org/1999/xhtml"
-                xmlns:h="http://xmlns.jcp.org/jsf/html">
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <ui:define name="title-page">
         Modelo de Sincronização
@@ -10,89 +12,38 @@
     <ui:define name="content-page">
         <div class="row">
             <div class="col-md-12">
-                <h1>Modelo de Migração</h1>
+                <h1>Lista de Modelos</h1>
                 <hr />
             </div>
         </div>
 
-        <h:form prependId="false">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-horizontal">
-                        <div class="form-group">
-                            <h:outputLabel for="nomeModelo"
-                                           styleClass="col-sm-2 control-label"
-                                           value="Nome do Modelo:"/>
-                            <div class="col-sm-10">
-                                <h:inputText id="nomeModelo"
-                                             styleClass="form-control"
-                                             value="#{modeloFormBean.modeloMigracao.nome}"
-                                             required="true"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <p:dataTable id="tblModelos" var="modelo" value="#{modeloListaBean.modelosMigracao}"
+                     paginator="true" rows="10" paginatorPosition="bottom" currentPageReportTemplate="Página {currentPage} de {totalPages}"
+                     paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                     rowsPerPageTemplate="10,20,30" emptyMessage="Nenhuma registro encontrado.">
 
-            <div class="row">
-                <div class="col-md-12">
-                    <h3>Master</h3>
-                    <hr />
-                </div>
-            </div>
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Nome do Modelo" />
+                </f:facet>
+                <h:outputText value="#{modelo.nome}" />
+            </p:column>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-horizontal">
-                        <div class="form-group">
-                            <h:outputLabel for="instancia" styleClass="col-sm-2 control-label" value="Nome da Instância:"></h:outputLabel>
-                            <div class="col-sm-10">
-                                <h:inputText id="instancia" styleClass="form-control" value="#{modeloFormBean.master.instancia}" required="true"></h:inputText>
-                            </div>
-                        </div>
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Opções" />
+                </f:facet>
 
-                        <div class="form-group">
-                            <h:outputLabel for="ip" styleClass="col-sm-2 control-label" value="IP:"></h:outputLabel>
-                            <div class="col-sm-10">
-                                <h:inputText id="ip" styleClass="form-control" value="#{modeloFormBean.master.ip}" required="true"></h:inputText>
-                            </div>
-                        </div>
+                <p:button value="Editar"  icon="ui-icon-pencil" >
+                    <f:param name="id" value="#{modelo.id}"/>
+                </p:button>
+                &nbsp;&nbsp;
+                <p:commandButton value="Excluir"  update="tblModelos"
+                                 onclick="if (!confirm(' deseja mesmo excluir o Modelo #{modelo.nome} ? '))
+                                             return false;"                    />
+            </p:column>
 
-                        <div class="form-group">
-                            <h:outputLabel for="portaOuvinte" styleClass="col-sm-2 control-label" value="Porta Ouvinte:"></h:outputLabel>
-                            <div class="col-sm-10">
-                                <h:inputText id="portaOuvinte" styleClass="form-control" value="#{modeloFormBean.master.portaOuvinte}" required="true"></h:inputText>
-                            </div>
-                        </div>
+        </p:dataTable>
 
-                        <div class="form-group">
-                            <h:outputLabel for="portaMin" styleClass="col-sm-2 control-label" value="Porta Mínima:"></h:outputLabel>
-                            <div class="col-sm-10">
-                                <h:inputText id="portaMin" styleClass="form-control" value="#{modeloFormBean.master.portaMin}" required="true"></h:inputText>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <h:outputLabel for="portaMax" styleClass="col-sm-2 control-label" value="Porta Máxima:"></h:outputLabel>
-                            <div class="col-sm-10">
-                                <h:inputText id="portaMax" styleClass="form-control" value="#{modeloFormBean.master.portaMax}" required="true"></h:inputText>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-10"></div>
-                <div class="col-md-1">
-                    <h:button value="Voltar"
-                              styleClass="btn btn-default form-control"/>
-                </div>
-                <div class="col-md-1">
-                    <h:commandButton value="Salvar"
-                                     styleClass="btn btn-primary form-control"
-                                     action="#{modeloFormBean.salvar}"/>
-                </div>
-            </div>
-        </h:form>
     </ui:define>
 </ui:composition>
