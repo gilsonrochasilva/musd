@@ -9,13 +9,6 @@
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 
 		<jta-data-source>java:jboss/datasources/musdDS</jta-data-source>
-		<class>br.com.musd.administrativo.Master</class>
-		<class>br.com.musd.administrativo.Host</class>
-		<class>br.com.musd.administrativo.JanelaSincronizacao</class>
-		<class>br.com.musd.administrativo.BancoDados</class>
-		<class>br.com.musd.administrativo.ModeloMigracao</class>
-		<class>br.com.musd.administrativo.Slave</class>
-		<class>br.com.musd.administrativo.DadosConexao</class>
 
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>

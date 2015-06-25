@@ -17,15 +17,8 @@ public class BancoDados implements Serializable {
 	private Integer id;
 
 	@Basic(optional = false)
-	@Column(name = "nome")
+	@Column(name = "nome", length = 100, nullable = false)
 	private String nome;
-
-	@JoinColumn(name = "masterID", referencedColumnName = "id")
-	@ManyToOne(optional = false)
-	private Master masterID;
-
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "bancoDados")
-	private List<DadosConexao> dadosConexaoList;
 
 	public BancoDados() {
 	}
@@ -53,22 +46,6 @@ public class BancoDados implements Serializable {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public Master getMasterID() {
-		return masterID;
-	}
-
-	public void setMasterID(Master masterID) {
-		this.masterID = masterID;
-	}
-
-	public List<DadosConexao> getDadosConexaoList() {
-		return dadosConexaoList;
-	}
-
-	public void setDadosConexaoList(List<DadosConexao> dadosConexaoList) {
-		this.dadosConexaoList = dadosConexaoList;
 	}
 
 	@Override

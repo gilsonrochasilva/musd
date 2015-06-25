@@ -1,11 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html
-        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:p="http://primefaces.org/ui">
 
 <h:head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -25,30 +23,75 @@
     <title>MUSD : <ui:insert name="title-page"/></title>
 </h:head>
 
-<h:body>
-    <div class="navbar navbar-default navbar-static-top">
-        <div class="container">
+<h:body style="padding-top: 65px;">
+    <!--Alertas do sistema-->
+    <h:form id="formMsg" prependId="false">
+        <p:growl id="msg" sticky="false"
+                 autoUpdate="true" life="3000"
+                 severity="info"
+                 showDetail="true"
+                 showSummary="false" />
+    </h:form>
+
+    <!--Menu do sistemas-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><span>MUSD</span></a>
+                <h:link outcome="pretty:home"
+                        styleClass="navbar-brand">
+                    <i class="fa fa-cloud-upload" style="font-size: 1.2em;"></i>
+                    <h:outputText value=" MUSD "
+                                  style="font-weight: bold; font-size: 1.2em;"/>
+                </h:link>
             </div>
-            <div class="collapse navbar-collapse" id="navbar-ex-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="">
-                        <a href="#">Home</a>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <h:link outcome="pretty:home">
+                            <i class="fa fa-home"/> Home<span class="sr-only">(current)</span>
+                        </h:link>
                     </li>
-                    <li class="active">
-                        <a href="#">Novo Modelo<br /></a>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <h:link outcome="pretty:novaJanela">
+                            <i class="fa fa-database"/> Banco de dados
+                        </h:link>
+                    </li>
+                    <li>
+                        <h:link outcome="pretty:novaJanela">
+                            <i class="fa fa-refresh"/> Janela
+                        </h:link>
+                    </li>
+                    <li>
+                        <h:link outcome="pretty:novoModelo">
+                            <i class="fa fa-file-text"/> Modelo
+                        </h:link>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" title="Configurações" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"/> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h:link value="Configurações"
+                                        outcome="pretty:home"/>
+                            </li>
+                            <li>
+                                <h:link value="Controle de Acesso"
+                                        outcome="pretty:home"/>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
         </div>
-    </div>
+    </nav>
 
     <div class="section">
         <div class="container">
@@ -57,6 +100,8 @@
         </div>
     </div>
 
+    <!-- Bootstrap Core JavaScript -->
+    <h:outputScript library="bootstrap" name="js/bootstrap.min.js"/>
+    <h:outputScript library="js" name="locale-primefaces.js"/>
 </h:body>
-
 </html>

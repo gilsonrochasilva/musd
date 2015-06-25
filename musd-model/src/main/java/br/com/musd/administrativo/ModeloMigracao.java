@@ -16,7 +16,7 @@ public class ModeloMigracao implements Serializable {
 	private Integer id;
 
 	@Basic(optional = false)
-	@Column(name = "nome")
+	@Column(name = "nome", length = 100, nullable = false)
 	private String nome;
 
 	public ModeloMigracao() {

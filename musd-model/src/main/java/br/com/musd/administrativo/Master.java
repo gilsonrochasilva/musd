@@ -21,8 +21,8 @@ public class Master extends Host implements Serializable {
 	@Column(name = "portaOuvinte", nullable = false)
 	private int portaOuvinte;
 
-	@JoinColumn(name = "modeloMigracao", referencedColumnName = "id")
 	@ManyToOne(optional = false)
+	@JoinColumn(name = "modeloMigracao", referencedColumnName = "id")
 	private ModeloMigracao modeloMigracao;
 
 	public Master() {
