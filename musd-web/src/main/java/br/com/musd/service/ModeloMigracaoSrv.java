@@ -50,15 +50,10 @@ public class ModeloMigracaoSrv {
     }
 
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
-    public void salvar(ModeloMigracao modeloMigracao, Master master, List<Slave> slaves) {
+    public void salvar(ModeloMigracao modeloMigracao, Master master) {
         salvar(modeloMigracao);
 
         master.setModeloMigracao(modeloMigracao);
         masterDAO.salvar(master);
-
-        for (Slave slave : slaves) {
-            slave.setModeloMigracao(modeloMigracao);
-            slaveDAO.salvar(slave);
-        }
     }
 }
