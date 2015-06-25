@@ -1,0 +1,98 @@
+<ui:composition template="../../WEB-INF/template/default.xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <ui:define name="title-page">
+        Modelo de Sincronização
+    </ui:define>
+
+    <ui:define name="content-page">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Modelo de Migração</h1>
+                <hr />
+            </div>
+        </div>
+
+        <h:form prependId="false">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <h:outputLabel for="nomeModelo"
+                                           styleClass="col-sm-2 control-label"
+                                           value="Nome do Modelo:"/>
+                            <div class="col-sm-10">
+                                <h:inputText id="nomeModelo"
+                                             styleClass="form-control"
+                                             value="#{modeloFormBean.modeloMigracao.nome}"
+                                             required="true"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Master</h3>
+                    <hr />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <h:outputLabel for="instancia" styleClass="col-sm-2 control-label" value="Nome da Instância:"></h:outputLabel>
+                            <div class="col-sm-10">
+                                <h:inputText id="instancia" styleClass="form-control" value="#{modeloFormBean.master.instancia}" required="true"></h:inputText>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <h:outputLabel for="ip" styleClass="col-sm-2 control-label" value="IP:"></h:outputLabel>
+                            <div class="col-sm-10">
+                                <h:inputText id="ip" styleClass="form-control" value="#{modeloFormBean.master.ip}" required="true"></h:inputText>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <h:outputLabel for="portaOuvinte" styleClass="col-sm-2 control-label" value="Porta Ouvinte:"></h:outputLabel>
+                            <div class="col-sm-10">
+                                <h:inputText id="portaOuvinte" styleClass="form-control" value="#{modeloFormBean.master.portaOuvinte}" required="true"></h:inputText>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <h:outputLabel for="portaMin" styleClass="col-sm-2 control-label" value="Porta Mínima:"></h:outputLabel>
+                            <div class="col-sm-10">
+                                <h:inputText id="portaMin" styleClass="form-control" value="#{modeloFormBean.master.portaMin}" required="true"></h:inputText>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <h:outputLabel for="portaMax" styleClass="col-sm-2 control-label" value="Porta Máxima:"></h:outputLabel>
+                            <div class="col-sm-10">
+                                <h:inputText id="portaMax" styleClass="form-control" value="#{modeloFormBean.master.portaMax}" required="true"></h:inputText>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10"></div>
+                <div class="col-md-1">
+                    <h:button value="Voltar"
+                              styleClass="btn btn-default form-control"/>
+                </div>
+                <div class="col-md-1">
+                    <h:commandButton value="Salvar"
+                                     styleClass="btn btn-primary form-control"
+                                     action="#{modeloFormBean.salvar}"/>
+                </div>
+            </div>
+        </h:form>
+    </ui:define>
+</ui:composition>
