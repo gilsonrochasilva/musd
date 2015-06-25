@@ -15,6 +15,7 @@
 		<class>br.com.musd.administrativo.Slave</class>
 		<class>br.com.musd.administrativo.DadosConexao</class>
 
+
 		<jta-data-source>java:jboss/datasources/musdDS</jta-data-source>
 
 		<properties>

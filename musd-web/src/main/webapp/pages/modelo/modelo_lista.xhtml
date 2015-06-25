@@ -1,16 +1,16 @@
-<ui:composition template="./../WEB-INF/template/default.xhtml"
+<ui:composition template="../../WEB-INF/template/default.xhtml"
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:h="http://xmlns.jcp.org/jsf/html">
 
     <ui:define name="title-page">
-        Modelo de SincronizaÃ§Ã£o
+        Modelo de Sincronização
     </ui:define>
 
     <ui:define name="content-page">
         <div class="row">
             <div class="col-md-12">
-                <h1>Modelo de MigraÃ§Ã£o</h1>
+                <h1>Modelo de Migração</h1>
                 <hr />
             </div>
         </div>
@@ -45,7 +45,7 @@
                 <div class="col-md-12">
                     <div class="form-horizontal">
                         <div class="form-group">
-                            <h:outputLabel for="instancia" styleClass="col-sm-2 control-label" value="Nome da InstÃ¢ncia:"></h:outputLabel>
+                            <h:outputLabel for="instancia" styleClass="col-sm-2 control-label" value="Nome da Instância:"></h:outputLabel>
                             <div class="col-sm-10">
                                 <h:inputText id="instancia" styleClass="form-control" value="#{modeloFormBean.master.instancia}" required="true"></h:inputText>
                             </div>
@@ -66,14 +66,14 @@
                         </div>
 
                         <div class="form-group">
-                            <h:outputLabel for="portaMin" styleClass="col-sm-2 control-label" value="Porta MÃ­nima:"></h:outputLabel>
+                            <h:outputLabel for="portaMin" styleClass="col-sm-2 control-label" value="Porta Mínima:"></h:outputLabel>
                             <div class="col-sm-10">
                                 <h:inputText id="portaMin" styleClass="form-control" value="#{modeloFormBean.master.portaMin}" required="true"></h:inputText>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <h:outputLabel for="portaMax" styleClass="col-sm-2 control-label" value="Porta MÃ¡xima:"></h:outputLabel>
+                            <h:outputLabel for="portaMax" styleClass="col-sm-2 control-label" value="Porta Máxima:"></h:outputLabel>
                             <div class="col-sm-10">
                                 <h:inputText id="portaMax" styleClass="form-control" value="#{modeloFormBean.master.portaMax}" required="true"></h:inputText>
                             </div>

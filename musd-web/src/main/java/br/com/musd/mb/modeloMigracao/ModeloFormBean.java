@@ -1,4 +1,4 @@
-package br.com.musd.mb;
+package br.com.musd.mb.modeloMigracao;
 
 import br.com.musd.administrativo.Master;
 import br.com.musd.administrativo.ModeloMigracao;
@@ -21,7 +21,7 @@ import java.util.List;
 @ManagedBean
 @ViewScoped
 @URLMappings(mappings = {
-    @URLMapping(id = "novoModelo", pattern = "/modelo/novo", viewId = "/pages/modelo_form.jsf")
+    @URLMapping(id = "novoModelo", pattern = "/modelo/novo", viewId = "/pages/modelo/modelo_form.jsf")
 })
 public class ModeloFormBean extends PaginaBean {
 

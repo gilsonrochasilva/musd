@@ -1,13 +1,16 @@
-package br.com.musd.mb;
+package br.com.musd.mb.modeloMigracao;
 
 import br.com.musd.administrativo.ModeloMigracao;
 import br.com.musd.mb.common.PaginaBean;
+import br.com.musd.service.ModeloMigracaoSrv;
 import com.ocpsoft.pretty.faces.annotation.URLAction;
 import com.ocpsoft.pretty.faces.annotation.URLMapping;
 import com.ocpsoft.pretty.faces.annotation.URLMappings;
 
+import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,10 +23,21 @@ import java.util.List;
 })
 public class ModeloListaBean extends PaginaBean {
 
-    private List<ModeloMigracao> modelosMigracao;
+    private List<ModeloMigracao> modelosMigracao = new ArrayList<ModeloMigracao>();
+
+    @EJB
+    private ModeloMigracaoSrv modeloMigracaoSrv;
 
     @URLAction(mappingId = "listaModelo")
     public void init() {
+        modelosMigracao = modeloMigracaoSrv.listarTodos();
+    }
 
+    public List<ModeloMigracao> getModelosMigracao() {
+        return modelosMigracao;
+    }
+
+    public void setModelosMigracao(List<ModeloMigracao> modelosMigracao) {
+        this.modelosMigracao = modelosMigracao;
     }
 }
