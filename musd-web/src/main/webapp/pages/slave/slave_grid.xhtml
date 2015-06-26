@@ -6,7 +6,7 @@
                 xmlns:p="http://primefaces.org/ui">
 
     <ui:define name="title-page">
-        Slaves
+        Lista de Slaves
     </ui:define>
 
     <ui:define name="content-page">
@@ -35,37 +35,35 @@
                          paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
                          rowsPerPageTemplate="10,20,30" emptyMessage="Nenhuma registro encontrado.">
 
+                <p:columnGroup type="header">
+                    <p:row>
+                        <p:column headerText="Instância"/>
+                        <p:column headerText="IP"/>
+                        <p:column headerText="Porta"/>
+
+                        <p:column headerText="Editar" style="width: 100px;"/>
+                    </p:row>
+                </p:columnGroup>
+
                 <p:column>
-                    <f:facet name="header">
-                        <h:outputText value="Instância" />
-                    </f:facet>
                     <h:outputText value="#{s.instancia}" />
                 </p:column>
 
-                <p:column>
-                    <f:facet name="header">
-                        <h:outputText value="IP" />
-                    </f:facet>
+                <p:column style="text-align: center;">
                     <h:outputText value="#{s.ip}" />
                 </p:column>
 
-                <p:column>
-                    <f:facet name="header">
-                        <h:outputText value="Porta" />
-                    </f:facet>
+                <p:column style="text-align: center;">
                     <h:outputText value="#{s.porta}" />
                 </p:column>
 
-                <p:column>
-                    <f:facet name="header">
-                        <h:outputText value="Opções" />
-                    </f:facet>
-                    <p:button value="Editar" outcome="pretty:editarSlave" icon="ui-icon-pencil" >
+                <p:column style="text-align: center;">
+                    <p:button title="Editar"
+                              outcome="pretty:editarSlave"
+                              icon="fa fa-edit" >
                         <f:param name="id" value="#{s.id}"/>
                     </p:button>
                 </p:column>
-
-
             </p:dataTable>
         </h:form>
     </ui:define>

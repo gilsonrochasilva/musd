@@ -35,43 +35,39 @@
                          paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
                          rowsPerPageTemplate="10,20,30" emptyMessage="Nenhuma registro encontrado.">
 
+                <p:columnGroup type="header">
+                    <p:row>
+                        <p:column headerText="Identificação"/>
+                        <p:column headerText="Hora Inicio"/>
+                        <p:column headerText="Hora Final"/>
+                        <p:column headerText="Intervalo (Dias)"/>
+
+                        <p:column headerText="Editar" style="width: 100px;"/>
+                    </p:row>
+                </p:columnGroup>
+
                 <p:column>
-                    <f:facet name="header">
-                        <h:outputText value="Identificação" />
-                    </f:facet>
                     <h:outputText value="#{j.identificacao}" />
                 </p:column>
 
-                <p:column>
-                    <f:facet name="header">
-                        <h:outputText value="Hora de Início" />
-                    </f:facet>
+                <p:column style="text-align: center;">
                     <h:outputText value="#{j.horaInicio}">
                         <f:convertDateTime pattern="HH:mm"></f:convertDateTime>
                     </h:outputText>
                 </p:column>
 
-                <p:column>
-                    <f:facet name="header">
-                        <h:outputText value="Hora do Fim" />
-                    </f:facet>
+                <p:column style="text-align: center;">
                     <h:outputText value="#{j.horaFim}">
                         <f:convertDateTime pattern="HH:mm"></f:convertDateTime>
                     </h:outputText>
                 </p:column>
 
-                <p:column>
-                    <f:facet name="header">
-                        <h:outputText value="Intervalo (dias)" />
-                    </f:facet>
-                    <h:outputText value="#{j.intervalo}" />
+                <p:column style="text-align: center;">
+                    <h:outputText value="#{j.intervalo} dias" />
                 </p:column>
 
-                <p:column>
-                    <f:facet name="header">
-                        <h:outputText value="Opções" />
-                    </f:facet>
-                    <p:button value="Editar" outcome="pretty:editarJanela" icon="ui-icon-pencil" >
+                <p:column style="text-align: center;">
+                    <p:button title="Editar registro" outcome="pretty:editarJanela" icon="ui-icon-pencil" >
                         <f:param name="id" value="#{j.id}"/>
                     </p:button>
                 </p:column>
