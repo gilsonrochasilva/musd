@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26a09e7f-4660-4835-ab05-036f6eabe6bb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musd-web/src/main/webapp/pages/modelo/modelo_lista.xhtml" afterPath="$PROJECT_DIR$/musd-web/src/main/webapp/pages/modelo/modelo_lista.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musd-web/src/main/webapp/WEB-INF/template/default.xhtml" afterPath="$PROJECT_DIR$/musd-web/src/main/webapp/WEB-INF/template/default.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MUSD.iws" />
@@ -34,14 +34,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="modelo_lista.xhtml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="modelo_lista.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/pages/modelo/modelo_lista.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6536412">
+            <state vertical-scroll-proportion="-15.333333">
               <caret line="76" column="74" selection-start-line="76" selection-start-column="74" selection-end-line="76" selection-end-column="74" />
               <folding>
                 <marker date="1435351017762" expanded="true" signature="2203:2205" placeholder="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.xhtml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/WEB-INF/template/default.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.30017763">
+              <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,8 +117,8 @@
         <option value="$PROJECT_DIR$/musd-web/src/main/webapp/WEB-INF/template/modelo.xhtml" />
         <option value="$PROJECT_DIR$/musd-web/src/main/webapp/pages/index.xhtml" />
         <option value="$PROJECT_DIR$/musd-web/src/main/webapp/pages/janela/janela_form.xhtml" />
-        <option value="$PROJECT_DIR$/musd-web/src/main/webapp/WEB-INF/template/default.xhtml" />
         <option value="$PROJECT_DIR$/musd-web/src/main/webapp/pages/modelo/modelo_lista.xhtml" />
+        <option value="$PROJECT_DIR$/musd-web/src/main/webapp/WEB-INF/template/default.xhtml" />
       </list>
     </option>
   </component>
@@ -1018,7 +1028,7 @@
       <workItem from="1435256158382" duration="6048000" />
       <workItem from="1435270400357" duration="3407000" />
       <workItem from="1435275809045" duration="7045000" />
-      <workItem from="1435345640811" duration="3596000" />
+      <workItem from="1435345640811" duration="3733000" />
     </task>
     <task id="LOCAL-00001" summary="Exclusão do pacote Repository e suas classes">
       <created>1435099849960</created>
@@ -1080,11 +1090,17 @@
       <option name="project" value="LOCAL" />
       <updated>1435350662948</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Modelo padronizaçao (view)">
+      <created>1435351041133</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1435351041133</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39396000" />
+    <option name="totallyTimeSpent" value="39533000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="767" extended-state="6" />
@@ -1511,21 +1527,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/WEB-INF/template/default.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13321492">
-          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/pages/modelo/modelo_lista.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6536412">
+        <state vertical-scroll-proportion="-15.333333">
           <caret line="76" column="74" selection-start-line="76" selection-start-column="74" selection-end-line="76" selection-end-column="74" />
           <folding>
             <marker date="1435351017762" expanded="true" signature="2203:2205" placeholder="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/WEB-INF/template/default.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30017763">
+          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
