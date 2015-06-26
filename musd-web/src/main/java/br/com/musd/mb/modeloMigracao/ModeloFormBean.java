@@ -69,6 +69,7 @@ public class ModeloFormBean extends PaginaBean {
         return modeloMigracao;
     }
 
+
     public void setModeloMigracao(ModeloMigracao modeloMigracao) {
         this.modeloMigracao = modeloMigracao;
     }
