@@ -36,13 +36,14 @@
                     <p:column rowspan="2"
                               headerText="Nome do Modelo"/>
 
-                    <p:column colspan="3" headerText="Operações" style="width: 210px;"/>
+                    <p:column colspan="4" headerText="Operações" style="width: 280px;"/>
                 </p:row>
 
                 <p:row>
                     <p:column headerText="Editar"/>
                     <p:column headerText="Excluir"/>
                     <p:column headerText="Slaves"/>
+                    <p:column headerText="Janelas"/>
                 </p:row>
             </p:columnGroup>
 
@@ -65,13 +66,15 @@
                                  onclick="if (!confirm(' deseja mesmo excluir o Modelo #{modelo.nome} ? '))
                                              return false;"/>
             </p:column>
-            <p:column>
+            <p:column style="text-align: center;">
                 <p:button title="Listar Slaves" outcome="pretty:listaSlave"
                           icon="fa fa-laptop"  style="text-align: center;">
                     <f:param name="idModelo" value="#{modelo.id}"/>
                 </p:button>
-
-                <p:button value="Janelas" outcome="pretty:listaJanela" icon="ui-icon-pencil" >
+            </p:column>
+            <p:column style="text-align: center;">
+                <p:button title="Janelas de Sincronização"
+                          outcome="pretty:listaJanela" icon="fa fa-refresh" >
                     <f:param name="idModelo" value="#{modelo.id}"/>
                 </p:button>
             </p:column>

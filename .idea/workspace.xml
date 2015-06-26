@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26a09e7f-4660-4835-ab05-036f6eabe6bb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musd-web/src/main/webapp/WEB-INF/template/default.xhtml" afterPath="$PROJECT_DIR$/musd-web/src/main/webapp/WEB-INF/template/default.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musd-web/src/main/webapp/pages/modelo/modelo_lista.xhtml" afterPath="$PROJECT_DIR$/musd-web/src/main/webapp/pages/modelo/modelo_lista.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -38,10 +37,10 @@
       <file leaf-file-name="modelo_lista.xhtml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/pages/modelo/modelo_lista.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.120781526">
-              <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.6536412">
+              <caret line="76" column="74" selection-start-line="76" selection-start-column="74" selection-end-line="76" selection-end-column="74" />
               <folding>
-                <marker date="1435350575738" expanded="true" signature="2150:2152" placeholder="{...}" />
+                <marker date="1435351017762" expanded="true" signature="2203:2205" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -539,18 +538,13 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/modeloMigracao/ModeloFormBean.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/slave/SlaveFormBean.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/slave/SlaveListaBean.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/ModeloMigracaoSrv.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/musd-model/src/main/java/br/com/musd/administrativo/JanelaSincronizacao.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/dao/JanelaSincronizacaoDAO.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/janelamigracao/JanelaFormBean.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/JanelaSincronizacaoSrv.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/SlaveSrv.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/musd-web/src/main/resources/META-INF/persistence.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/musd-web/src/main/webapp/WEB-INF/template/default.xhtml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/musd-web/src/main/webapp/pages/index.xhtml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/musd-web/src/main/webapp/pages/janela/janela_form.xhtml</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/musd-web/src/main/webapp/pages/modelo/modelo_lista.xhtml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/musd-web/src/main/webapp/pages/slave/slave_form.xhtml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/musd-web/src/main/webapp/pages/slave/slave_grid.xhtml</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -558,6 +552,8 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/janelamigracao/JanelaListaBean.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/musd-web/src/main/webapp/pages/janela/janela_grid.xhtml</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -1022,7 +1018,7 @@
       <workItem from="1435256158382" duration="6048000" />
       <workItem from="1435270400357" duration="3407000" />
       <workItem from="1435275809045" duration="7045000" />
-      <workItem from="1435345640811" duration="3198000" />
+      <workItem from="1435345640811" duration="3596000" />
     </task>
     <task id="LOCAL-00001" summary="Exclusão do pacote Repository e suas classes">
       <created>1435099849960</created>
@@ -1078,11 +1074,17 @@
       <option name="project" value="LOCAL" />
       <updated>1435289583022</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Modelo padronizaçao (view)">
+      <created>1435350662948</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1435350662948</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38998000" />
+    <option name="totallyTimeSpent" value="39396000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="767" extended-state="6" />
@@ -1100,7 +1102,7 @@
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.78733766" sideWeight="0.4909091" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4788961" sideWeight="0.4909091" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1140,7 +1142,8 @@
     <MESSAGE value="Formulario de Model (parcial)" />
     <MESSAGE value="persistencia" />
     <MESSAGE value="Correção das mensagem da home, inclusão do formulário de Janela de Sincronização." />
-    <option name="LAST_COMMIT_MESSAGE" value="Correção das mensagem da home, inclusão do formulário de Janela de Sincronização." />
+    <MESSAGE value="Modelo padronizaçao (view)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modelo padronizaçao (view)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1518,10 +1521,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/pages/modelo/modelo_lista.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.120781526">
-          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.6536412">
+          <caret line="76" column="74" selection-start-line="76" selection-start-column="74" selection-end-line="76" selection-end-column="74" />
           <folding>
-            <marker date="1435350575738" expanded="true" signature="2150:2152" placeholder="{...}" />
+            <marker date="1435351017762" expanded="true" signature="2203:2205" placeholder="{...}" />
           </folding>
         </state>
       </provider>
