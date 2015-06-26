@@ -40,9 +40,10 @@ public class ModeloFormBean extends PaginaBean {
         slaves = new ArrayList<Slave>();
     }
 
-    public void salvar() {
+    public String salvar() {
         modeloMigracaoSrv.salvar(modeloMigracao, master);
         addInfo("Modelo salvo com sucesso!");
+        return "pretty:listaModelo";
     }
 
     public ModeloMigracao getModeloMigracao() {
