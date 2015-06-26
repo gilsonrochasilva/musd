@@ -6,14 +6,14 @@
                 xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <ui:define name="title-page">
-        Modelo de Sincronizacao
+        Modelo de Sincronização
     </ui:define>
 
     <ui:define name="content-page">
     <h:form id="formLista">
         <div class="row">
             <div class="col-md-12">
-                <h1>Lista de Modelos</h1>
+                <h1>Modelos de Sincronização</h1>
                 <hr />
             </div>
         </div>
@@ -26,9 +26,10 @@
                                  action="pretty:novoModelo"/>
             </div>
         </div>
-
-
-        <p:dataTable id="tblModelos" var="modelo" value="#{modeloListaBean.modelosMigracao}">
+        <br></br>
+        <p:dataTable id="tblModelos" var="modelo" value="#{modeloListaBean.modelosMigracao}" paginator="true" rows="10" paginatorPosition="bottom" currentPageReportTemplate="Página {currentPage} de {totalPages}"
+                     paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                     rowsPerPageTemplate="10,20,30" emptyMessage="Nenhuma registro encontrado.">
 
             <p:column>
                 <f:facet name="header">
@@ -39,16 +40,21 @@
 
             <p:column>
                 <f:facet name="header">
-                    <h:outputText value="Opcoes" />
+                    <h:outputText value="Opções" />
                 </f:facet>
 
                 <p:button value="Editar" outcome="pretty:modeloEditar" icon="ui-icon-pencil" >
                     <f:param name="id" value="#{modelo.id}"/>
                 </p:button>
+
                 <p:commandButton value="Excluir"  update="tblModelos" icon="ui-icon-closethick" action="#{modeloListaBean.excluir(modelo)}"
                                  ajax="false"
                                  onclick="if (!confirm(' deseja mesmo excluir o Modelo #{modelo.nome} ? '))
                                              return false;"                    />
+
+                <p:button value="Slaves" outcome="pretty:listaSlave" icon="ui-icon-pencil" >
+                    <f:param name="idModelo" value="#{modelo.id}"/>
+                </p:button>
             </p:column>
 
         </p:dataTable>

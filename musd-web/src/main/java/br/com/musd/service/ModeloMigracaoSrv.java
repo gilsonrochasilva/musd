@@ -74,6 +74,7 @@ public class ModeloMigracaoSrv {
 
     }
 
+    @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
     public void excluir(ModeloMigracao modeloMigracao){
         Master masterTemp = masterDAO.obterMasterPorMomelo(modeloMigracao);
         if (masterTemp != null) {

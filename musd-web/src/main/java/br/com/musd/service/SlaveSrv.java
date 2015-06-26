@@ -27,8 +27,12 @@ public class SlaveSrv {
         return slaveDAO.listaPorModelo(modeloMigracao);
     }
 
-    public void salvar(Slave slave){
-        slaveDAO.salvar(slave);
+    public void salvar(Slave slave) {
+        if(slave.getId() == null) {
+            slaveDAO.salvar(slave);
+        } else {
+            slaveDAO.atualizar(slave);
+        }
     }
 
 

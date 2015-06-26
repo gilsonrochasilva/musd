@@ -2,6 +2,7 @@ package br.com.musd.mb.slave;
 
 import br.com.musd.administrativo.ModeloMigracao;
 import br.com.musd.administrativo.Slave;
+import br.com.musd.mb.common.PaginaBean;
 import br.com.musd.service.ModeloMigracaoSrv;
 import br.com.musd.service.SlaveSrv;
 import com.ocpsoft.pretty.faces.annotation.URLAction;
@@ -19,10 +20,9 @@ import java.util.List;
 @ManagedBean
 @ViewScoped
 @URLMappings(mappings = {
-        @URLMapping(id = "listaSlave", pattern = "/slave/lista", viewId = "/pages/slave/slave_grid.jsf")
+    @URLMapping(id = "listaSlave", pattern = "/slave/#{idModelo : slaveListaBean.idModelo}", viewId = "/pages/slave/slave_grid.jsf")
 })
-public class SlaveListaBean {
-
+public class SlaveListaBean extends PaginaBean {
 
     @EJB
     private SlaveSrv slaveSrv;
@@ -30,18 +30,16 @@ public class SlaveListaBean {
     @EJB
     private ModeloMigracaoSrv modeloMigracaoSrv;
 
-    private List<Slave> slaves;
+    private Integer idModelo;
 
-    private List<ModeloMigracao> modeloMigracaoList;
+    private List<Slave> slaves;
 
     private ModeloMigracao modeloMigracao;
 
     @URLAction(mappingId = "listaSlave")
     public void init() {
-
-        modeloMigracaoList = modeloMigracaoSrv.listarTodos();
-
-        slaves = slaveSrv.lista(modeloMigracaoList.get(0));
+        modeloMigracao = modeloMigracaoSrv.getUm(idModelo);
+        slaves = slaveSrv.lista(modeloMigracao);
     }
 
     public void listarSlave(){
@@ -64,11 +62,11 @@ public class SlaveListaBean {
         this.modeloMigracao = modeloMigracao;
     }
 
-    public List<ModeloMigracao> getModeloMigracaoList() {
-        return modeloMigracaoList;
+    public Integer getIdModelo() {
+        return idModelo;
     }
 
-    public void setModeloMigracaoList(List<ModeloMigracao> modeloMigracaoList) {
-        this.modeloMigracaoList = modeloMigracaoList;
+    public void setIdModelo(Integer idModelo) {
+        this.idModelo = idModelo;
     }
 }

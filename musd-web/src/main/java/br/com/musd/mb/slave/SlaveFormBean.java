@@ -21,8 +21,8 @@ import java.util.List;
 @ManagedBean
 @ViewScoped
 @URLMappings(mappings = {
-    @URLMapping(id = "novoSlave", pattern = "/slave/novo", viewId = "/pages/slave/slave_form.jsf"),
-    @URLMapping(id = "editarSlave", pattern = "/slave/editar/#{slaveFormBean.id}", viewId = "/pages/slave/slave_form.jsf")
+    @URLMapping(id = "novoSlave", pattern = "/slave/novo/#{idModelo : slaveFormBean.idModelo}", viewId = "/pages/slave/slave_form.jsf"),
+    @URLMapping(id = "editarSlave", pattern = "/slave/editar/#{id : slaveFormBean.id}", viewId = "/pages/slave/slave_form.jsf")
 })
 public class SlaveFormBean extends PaginaBean{
 
@@ -34,29 +34,23 @@ public class SlaveFormBean extends PaginaBean{
 
     private Integer id;
 
-    private List<ModeloMigracao> modeloMigracaoList;
-
-    private ModeloMigracao modeloMigracao;
+    private Integer idModelo;
 
     private Slave slave;
 
 
     @URLAction(mappingId = "novoSlave")
-    public void init(){
-
-        modeloMigracaoList = modeloMigracaoSrv.listarTodos();
-
+    public void init() {
         if(id == null){
             slave = new Slave();
+            slave.setModeloMigracao(modeloMigracaoSrv.getUm(idModelo));
         } else {
             slave = slaveSrv.getUm(id);
         }
     }
 
     @URLAction(mappingId = "editarSlave")
-    public void editar(){
-        modeloMigracaoList = modeloMigracaoSrv.listarTodos();
-
+    public void editar() {
         if(id == null){
             slave = new Slave();
         } else {
@@ -64,15 +58,14 @@ public class SlaveFormBean extends PaginaBean{
         }
     }
 
-    public String salvar(){
+    public void salvar(){
         try {
             slaveSrv.salvar(slave);
+            addInfo("Slave salvo com sucesso.");
         }
         catch (ConstraintViolationException cvex){
             addWarn("Erro ao salvar registro");
         }
-
-        return "pretty:listaSlave";
     }
 
     public Integer getId() {
@@ -83,27 +76,19 @@ public class SlaveFormBean extends PaginaBean{
         this.id = id;
     }
 
-    public List<ModeloMigracao> getModeloMigracaoList() {
-        return modeloMigracaoList;
-    }
-
-    public void setModeloMigracaoList(List<ModeloMigracao> modeloMigracaoList) {
-        this.modeloMigracaoList = modeloMigracaoList;
-    }
-
-    public ModeloMigracao getModeloMigracao() {
-        return modeloMigracao;
-    }
-
-    public void setModeloMigracao(ModeloMigracao modeloMigracao) {
-        this.modeloMigracao = modeloMigracao;
-    }
-
     public Slave getSlave() {
         return slave;
     }
 
     public void setSlave(Slave slave) {
         this.slave = slave;
+    }
+
+    public Integer getIdModelo() {
+        return idModelo;
+    }
+
+    public void setIdModelo(Integer idModelo) {
+        this.idModelo = idModelo;
     }
 }

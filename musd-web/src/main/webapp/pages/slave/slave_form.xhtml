@@ -21,65 +21,48 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <h3>Formulário de Host Slave</h3>
-                    <hr />
-                </div>
-            </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <h:outputLabel for="modelo" styleClass="col-sm-2 control-label" value="Modelo de Migração:"></h:outputLabel>
+                            <div class="col-sm-10">
+                                <h:inputText styleClass="form-control" value="#{slaveFormBean.slave.modeloMigracao.nome}" id="modelo" disabled="true"></h:inputText>
+                            </div>
+                        </div>
 
-            <div class="row">
-                <div class="col-md-12">
+                        <div class="form-group">
+                            <h:outputLabel for="instancia" styleClass="col-sm-2 control-label" value="Nome da Instância:"></h:outputLabel>
+                            <div class="col-sm-10">
+                                <h:inputText id="instancia" styleClass="form-control" value="#{slaveFormBean.slave.instancia}" required="true"></h:inputText>
+                            </div>
+                        </div>
 
-                    <div class="form-group">
-                        <h:outputLabel for="cbmModelo" styleClass="col-sm-2 control-label" value="Modelo Migração:"></h:outputLabel>
-                        <div class="col-sm-10">
-                            <p:selectOneMenu id="cbmModelo"
-                                             value="#{slaveFormBean.slave.modeloMigracao}"
-                                             required="true" converter="objConverter">
-                                <f:selectItem itemLabel="Selecione" itemValue="" />
-                                <f:selectItems value="#{slaveFormBean.modeloMigracaoList}"
-                                               var="modelo"
-                                               itemValue="#{modelo}"
-                                               itemLabel="#{modelo.nome}"
-                                        />
-                            </p:selectOneMenu>
+                        <div class="form-group">
+                            <h:outputLabel for="ip" styleClass="col-sm-2 control-label" value="IP do Host:"></h:outputLabel>
+                            <div class="col-sm-10">
+                                <h:inputText id="ip" styleClass="form-control" value="#{slaveFormBean.slave.ip}" required="true"></h:inputText>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <h:outputLabel for="porta" styleClass="col-sm-2 control-label" value="Porta de Comunicação:"></h:outputLabel>
+                            <div class="col-sm-10">
+                                <h:inputText id="porta" styleClass="form-control" value="#{slaveFormBean.slave.porta}" required="true"></h:inputText>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <h:outputLabel for="instancia" styleClass="col-sm-2 control-label" value="Nome da Instância:"></h:outputLabel>
-                        <div class="col-sm-10">
-                            <h:inputText id="instancia" styleClass="form-control" value="#{slaveFormBean.slave.instancia}" required="true"></h:inputText>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <h:outputLabel for="ip" styleClass="col-sm-2 control-label" value="IP do Host:"></h:outputLabel>
-                        <div class="col-sm-10">
-                            <h:inputText id="ip" styleClass="form-control" value="#{slaveFormBean.slave.ip}" required="true"></h:inputText>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <h:outputLabel for="porta" styleClass="col-sm-2 control-label" value="Porta de Comunicação:"></h:outputLabel>
-                        <div class="col-sm-10">
-                            <h:inputText id="porta" styleClass="form-control" value="#{slaveFormBean.slave.porta}" required="true"></h:inputText>
-                        </div>
-                    </div>
-
-
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-10"></div>
                 <div class="col-md-1">
-                    <h:commandButton value="Salvar"
-                                     styleClass="btn btn-primary form-control"
-                                     action="#{slaveFormBean.salvar()}"/>
-
-                    <h:button value="Voltar"
-                              styleClass="btn btn-default form-control"/>
+                    <h:button value="Voltar" styleClass="btn btn-default form-control" outcome="pretty:listaSlave">
+                        <f:param name="idModelo" value="#{slaveFormBean.slave.modeloMigracao.id}"/>
+                    </h:button>
                 </div>
 
+                <div class="col-md-1">
+                    <h:commandButton value="Salvar" styleClass="btn btn-primary form-control" action="#{slaveFormBean.salvar()}"/>
+                </div>
             </div>
         </h:form>
     </ui:define>
