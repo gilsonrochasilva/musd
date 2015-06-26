@@ -31,32 +31,46 @@
                      paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
                      rowsPerPageTemplate="10,20,30" emptyMessage="Nenhuma registro encontrado.">
 
+            <p:columnGroup type="header">
+                <p:row>
+                    <p:column rowspan="2"
+                              headerText="Nome do Modelo"/>
+
+                    <p:column colspan="3" headerText="Operações" style="width: 210px;"/>
+                </p:row>
+
+                <p:row>
+                    <p:column headerText="Editar"/>
+                    <p:column headerText="Excluir"/>
+                    <p:column headerText="Slaves"/>
+                </p:row>
+            </p:columnGroup>
+
             <p:column>
-                <f:facet name="header">
-                    <h:outputText value="Nome do Modelo" />
-                </f:facet>
                 <h:outputText value="#{modelo.nome}" />
             </p:column>
 
-            <p:column>
-                <f:facet name="header">
-                    <h:outputText value="Opções" />
-                </f:facet>
-
-                <p:button value="Editar" outcome="pretty:modeloEditar" icon="ui-icon-pencil" >
+            <p:column style="text-align: center;">
+                <p:button title="Editar registro"
+                          outcome="pretty:modeloEditar"
+                          icon="fa fa-edit" >
                     <f:param name="id" value="#{modelo.id}"/>
-                </p:button>
-
-                <p:commandButton value="Excluir"  update="tblModelos" icon="ui-icon-closethick" action="#{modeloListaBean.excluir(modelo)}"
-                                 ajax="false"
-                                 onclick="if (!confirm(' deseja mesmo excluir o Modelo #{modelo.nome} ? '))
-                                             return false;"                    />
-
-                <p:button value="Slaves" outcome="pretty:listaSlave" icon="ui-icon-pencil" >
-                    <f:param name="idModelo" value="#{modelo.id}"/>
                 </p:button>
             </p:column>
 
+            <p:column style="text-align: center;">
+                <p:commandButton update="tblModelos"
+                                 icon="fa fa-remove" action="#{modeloListaBean.excluir(modelo)}"
+                                 ajax="false" title="Excluir registro"
+                                 onclick="if (!confirm(' deseja mesmo excluir o Modelo #{modelo.nome} ? '))
+                                             return false;"/>
+            </p:column>
+            <p:column>
+                <p:button title="Listar Slaves" outcome="pretty:listaSlave"
+                          icon="fa fa-laptop"  style="text-align: center;">
+                    <f:param name="idModelo" value="#{modelo.id}"/>
+                </p:button>
+            </p:column>
         </p:dataTable>
     </h:form>
     </ui:define>
