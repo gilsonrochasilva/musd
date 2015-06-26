@@ -1,17 +1,19 @@
 <ui:composition template="./../WEB-INF/template/default.xhtml"
-                xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html">
 
     <ui:define name="title-page">
-        Modelo de Sincronização de Dados
+        <h:outputText value="Modelo de Sincronização de Dados"/>
     </ui:define>
 
     <ui:define name="content-page">
         <div class="jumbotron">
             <div class="text-center">
-                <h1>Bem vindo ao MUSD</h1>
+                <h1><i class="fa fa-cloud-upload fa-2x"/></h1>
+                <h1><h:outputText value="Bem vindo ao MUSD"/></h1>
 
-                <p>Modelo de Sicronização Unidirecional de Dados</p>
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">Janela de Sincronização</a></p>
+                <p><h:outputText value="Modelo de Sicronização Unidirecional de Dados"/></p>
             </div>
         </div>
     </ui:define>
