@@ -4,8 +4,10 @@ import br.com.musd.administrativo.Master;
 import br.com.musd.administrativo.ModeloMigracao;
 import br.com.musd.administrativo.Slave;
 import br.com.musd.mb.common.PaginaBean;
+import br.com.musd.service.MasterSrv;
 import br.com.musd.service.ModeloMigracaoSrv;
 import com.ocpsoft.pretty.faces.annotation.URLAction;
+import com.ocpsoft.pretty.faces.annotation.URLActions;
 import com.ocpsoft.pretty.faces.annotation.URLMapping;
 import com.ocpsoft.pretty.faces.annotation.URLMappings;
 
@@ -21,6 +23,7 @@ import java.util.List;
 @ManagedBean
 @ViewScoped
 @URLMappings(mappings = {
+    @URLMapping(id = "modeloEditar", pattern = "/modelo/editar/#{id : modeloFormBean.id}", viewId = "/pages/modelo/modelo_form.jsf"),
     @URLMapping(id = "novoModelo", pattern = "/modelo/novo", viewId = "/pages/modelo/modelo_form.jsf")
 })
 public class ModeloFormBean extends PaginaBean {
@@ -31,18 +34,35 @@ public class ModeloFormBean extends PaginaBean {
 
     private List<Slave> slaves;
 
+    private Integer id;
+
     @EJB private ModeloMigracaoSrv modeloMigracaoSrv;
 
-    @URLAction(mappingId = "novoModelo")
+    @EJB private MasterSrv masterSrv;
+
+    @URLActions(actions = {
+            @URLAction(mappingId = "modeloEditar", onPostback = false),
+            @URLAction(mappingId = "novoModelo", onPostback = false) })
     public void init() {
-        modeloMigracao = new ModeloMigracao();
-        master = new Master();
-        slaves = new ArrayList<Slave>();
+        if (id != null) {
+            modeloMigracao = modeloMigracaoSrv.getUm(id);
+            if (modeloMigracao != null) {
+                master = masterSrv.getUm(modeloMigracao);
+            }
+        }else{
+            modeloMigracao = new ModeloMigracao();
+            master = new Master();
+        }
     }
 
-    public void salvar() {
+    public String salvar() {
         modeloMigracaoSrv.salvar(modeloMigracao, master);
-        addInfo("Modelo salvo com sucesso!");
+        if (id != null) {
+            addInfo("Modelo Alterado com sucesso!");
+        }else{
+            addInfo("Modelo salvo com sucesso!");
+        }
+        return "pretty:listaModelo";
     }
 
     public ModeloMigracao getModeloMigracao() {
@@ -67,5 +87,13 @@ public class ModeloFormBean extends PaginaBean {
 
     public void setSlaves(List<Slave> slaves) {
         this.slaves = slaves;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }

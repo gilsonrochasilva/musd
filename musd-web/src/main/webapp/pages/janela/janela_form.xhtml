@@ -1,0 +1,66 @@
+<ui:composition template="../../WEB-INF/template/default.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <ui:define name="title-page">
+        Janela de Sincronização
+    </ui:define>
+
+    <ui:define name="content-page">
+        <h:form prependId="false">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Janela de Sincronização</h3>
+                    <hr />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <h:outputLabel for="instancia" styleClass="col-sm-2 control-label" value="Identificação:"></h:outputLabel>
+                            <div class="col-sm-10">
+                                <h:inputText id="instancia" styleClass="form-control" value="#{modeloFormBean.master.instancia}" required="true"></h:inputText>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <h:outputLabel for="portaMin" styleClass="col-sm-2 control-label" value="Hora Início:"></h:outputLabel>
+                            <div class="col-sm-10">
+                                <h:inputText id="portaMin" styleClass="form-control" value="#{modeloFormBean.master.portaMin}" required="true"></h:inputText>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <h:outputLabel for="portaMax" styleClass="col-sm-2 control-label" value="Hora Final:"></h:outputLabel>
+                            <div class="col-sm-10">
+                                <h:inputText id="portaMax" styleClass="form-control" value="#{modeloFormBean.master.portaMax}" required="true"></h:inputText>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <h:outputLabel for="portaOuvinte" styleClass="col-sm-2 control-label" value="Intervalo:"></h:outputLabel>
+                            <div class="col-sm-10">
+                                <h:inputText id="portaOuvinte" styleClass="form-control" value="#{modeloFormBean.master.portaOuvinte}" required="true"></h:inputText>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10"></div>
+                <div class="col-md-1">
+                    <h:button value="Voltar"
+                              styleClass="btn btn-default form-control"/>
+                </div>
+                <div class="col-md-1">
+                    <h:commandButton value="Salvar"
+                                     styleClass="btn btn-primary form-control"
+                                     action="#{modeloFormBean.salvar}"/>
+                </div>
+            </div>
+        </h:form>
+    </ui:define>
+</ui:composition>

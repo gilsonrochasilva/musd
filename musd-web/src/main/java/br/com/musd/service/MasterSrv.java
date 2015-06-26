@@ -1,6 +1,7 @@
 package br.com.musd.service;
 
 import br.com.musd.administrativo.Master;
+import br.com.musd.administrativo.ModeloMigracao;
 import br.com.musd.dao.MasterDAO;
 
 import javax.ejb.Stateless;
@@ -17,6 +18,11 @@ public class MasterSrv {
         return masterDAO.getUm(id, Master.class);
     }
 
+    public Master getUm(ModeloMigracao modeloMigracao)
+    {
+        return masterDAO.obterMasterPorMomelo(modeloMigracao);
+    }
+
     public List<Master> listarTodos(){
         return masterDAO.listar(Master.class);
     }
@@ -29,6 +35,10 @@ public class MasterSrv {
     public void salvar(Master master)
     {
         masterDAO.salvar(master);
+    }
+
+    public void excluir(Master master){
+        masterDAO.remover(master.getId(),Master.class);
     }
 
 }
