@@ -10,12 +10,23 @@
     </ui:define>
 
     <ui:define name="content-page">
+    <h:form id="formLista">
         <div class="row">
             <div class="col-md-12">
                 <h1>Lista de Modelos</h1>
                 <hr />
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-2">
+                <h:commandButton value="Novo Modelo"
+                                 styleClass="btn btn-primary form-control"
+                                 action="pretty:novoModelo"/>
+            </div>
+        </div>
+
 
         <p:dataTable id="tblModelos" var="modelo" value="#{modeloListaBean.modelosMigracao}">
 
@@ -34,12 +45,12 @@
                 <p:button value="Editar"  icon="ui-icon-pencil" >
                     <f:param name="id" value="#{modelo.id}"/>
                 </p:button>
-                <p:commandButton value="Excluir"  update="tblModelos"
+                <p:commandButton value="Excluir"  update="tblModelos" icon="ui-icon-closethick"
                                  onclick="if (!confirm(' deseja mesmo excluir o Modelo #{modelo.nome} ? '))
                                              return false;"                    />
             </p:column>
 
         </p:dataTable>
-
+    </h:form>
     </ui:define>
 </ui:composition>
