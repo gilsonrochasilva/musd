@@ -42,10 +42,10 @@
                     <h:outputText value="Opcoes" />
                 </f:facet>
 
-                <p:button value="Editar"  icon="ui-icon-pencil" >
+                <p:button value="Editar" outcome="pretty:complementoForm" icon="ui-icon-pencil" >
                     <f:param name="id" value="#{modelo.id}"/>
                 </p:button>
-                <p:commandButton value="Excluir"  update="tblModelos" icon="ui-icon-closethick"
+                <p:commandButton value="Excluir"  update="tblModelos" icon="ui-icon-closethick" action="#{modeloListaBean.excluir(modelo)}"
                                  onclick="if (!confirm(' deseja mesmo excluir o Modelo #{modelo.nome} ? '))
                                              return false;"                    />
             </p:column>

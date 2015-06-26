@@ -40,4 +40,8 @@ public class ModeloListaBean extends PaginaBean {
     public void setModelosMigracao(List<ModeloMigracao> modelosMigracao) {
         this.modelosMigracao = modelosMigracao;
     }
+
+    public void excluir(ModeloMigracao modeloMigracao){
+        modeloMigracaoSrv.excluir(modeloMigracao);
+    }
 }

@@ -52,13 +52,28 @@ public class ModeloMigracaoSrv {
 
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
     public void salvar(ModeloMigracao modeloMigracao, Host host) {
-        salvar(modeloMigracao);
+        if (modeloMigracao.getId() != null) {
+           atualizar(modeloMigracao);
+            if (host instanceof Master){
+                ((Master) host).setModeloMigracao(modeloMigracao);
+                masterDAO.atualizar((Master) host);
+            }
 
-        if (host instanceof Master){
-            ((Master) host).setModeloMigracao(modeloMigracao);
-            masterDAO.salvar((Master) host);
-
+        }else{
+            salvar(modeloMigracao);
+            if (host instanceof Master){
+                ((Master) host).setModeloMigracao(modeloMigracao);
+                masterDAO.salvar((Master) host);
+            }
         }
 
+    }
+
+    public void excluir(ModeloMigracao modeloMigracao){
+        Master masterTemp = masterDAO.obterMasterPorMomelo(modeloMigracao);
+        if (masterTemp != null) {
+            masterDAO.remover(masterTemp.getId(),Master.class);
+        }
+        modeloMigracaoDAO.remover(modeloMigracao.getId(),ModeloMigracao.class);
     }
 }
