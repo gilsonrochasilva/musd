@@ -60,5 +60,10 @@ public class ModeloMigracaoSrv {
 
         }
 
+        if(host instanceof Slave){
+            ((Slave) host).setModeloMigracao(modeloMigracao);
+            slaveDAO.salvar((Slave) host);
+        }
+
     }
 }

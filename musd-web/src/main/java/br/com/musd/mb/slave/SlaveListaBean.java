@@ -38,7 +38,10 @@ public class SlaveListaBean {
 
     @URLAction(mappingId = "listaSlave")
     public void init() {
+
         modeloMigracaoList = modeloMigracaoSrv.listarTodos();
+
+        slaves = slaveSrv.lista(modeloMigracaoList.get(0));
     }
 
     public void listarSlave(){

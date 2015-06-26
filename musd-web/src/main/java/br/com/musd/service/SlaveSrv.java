@@ -15,6 +15,10 @@ public class SlaveSrv {
     private SlaveDAO slaveDAO;
 
 
+    public Slave getUm(Integer id){
+        return slaveDAO.getUm(id, Slave.class);
+    }
+
     public List<Slave> lista(){
         return slaveDAO.listar(Slave.class);
     }
@@ -23,7 +27,9 @@ public class SlaveSrv {
         return slaveDAO.listaPorModelo(modeloMigracao);
     }
 
-
+    public void salvar(Slave slave){
+        slaveDAO.salvar(slave);
+    }
 
 
 
