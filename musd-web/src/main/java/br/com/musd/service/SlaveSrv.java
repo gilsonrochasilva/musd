@@ -34,7 +34,4 @@ public class SlaveSrv {
             slaveDAO.atualizar(slave);
         }
     }
-
-
-
 }

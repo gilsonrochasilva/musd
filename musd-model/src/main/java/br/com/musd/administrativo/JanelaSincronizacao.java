@@ -18,11 +18,11 @@ public class JanelaSincronizacao implements Serializable {
 	@Column(name = "identificacao", nullable = false, length = 50)
 	private String identificacao;
 
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIME)
 	@Column(name = "hora_inicio", nullable= false)
 	private Date horaInicio;
 
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIME)
 	@Column(name = "hora_fim", nullable = false)
 	private Date horaFim;
 
