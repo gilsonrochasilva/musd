@@ -1,49 +1,59 @@
-<ui:composition template="../../WEB-INF/template/default.xhtml"
-                xmlns="http://www.w3.org/1999/xhtml"
+<ui:composition template="./../../WEB-INF/template/default.xhtml"
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-                xmlns:h="http://xmlns.jcp.org/jsf/html">
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
 
     <ui:define name="title-page">
         Janela de Sincronização
     </ui:define>
 
     <ui:define name="content-page">
-        <h:form prependId="false">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3>Janela de Sincronização</h3>
-                    <hr />
-                </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Janela de Sincronização</h1>
+                <hr />
             </div>
+        </div>
+
+        <h:form prependId="false">
 
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-horizontal">
                         <div class="form-group">
-                            <h:outputLabel for="instancia" styleClass="col-sm-2 control-label" value="Identificação:"></h:outputLabel>
+                            <h:outputLabel for="modelo" styleClass="col-sm-2 control-label" value="Modelo de Migração:"></h:outputLabel>
                             <div class="col-sm-10">
-                                <h:inputText id="instancia" styleClass="form-control" value="#{modeloFormBean.master.instancia}" required="true"></h:inputText>
+                                <h:inputText styleClass="form-control" value="#{janelaFormBean.janelaSincronizacao.modeloMigracao.nome}" id="modelo" disabled="true"></h:inputText>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <h:outputLabel for="portaMin" styleClass="col-sm-2 control-label" value="Hora Início:"></h:outputLabel>
+                            <h:outputLabel for="identificacao" styleClass="col-sm-2 control-label" value="Identificação:"></h:outputLabel>
                             <div class="col-sm-10">
-                                <h:inputText id="portaMin" styleClass="form-control" value="#{modeloFormBean.master.portaMin}" required="true"></h:inputText>
+                                <h:inputText id="identificacao" styleClass="form-control" value="#{janelaFormBean.janelaSincronizacao.identificacao}" required="true"></h:inputText>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <h:outputLabel for="portaMax" styleClass="col-sm-2 control-label" value="Hora Final:"></h:outputLabel>
+                            <h:outputLabel for="horaInicio" styleClass="col-sm-2 control-label" value="Hora de Início:"></h:outputLabel>
                             <div class="col-sm-10">
-                                <h:inputText id="portaMax" styleClass="form-control" value="#{modeloFormBean.master.portaMax}" required="true"></h:inputText>
+                                <p:calendar id="horaInicio"  value="#{janelaFormBean.janelaSincronizacao.horaInicio}" pattern="HH:mm a" timeOnly="true" locale="pt_BR" required="true"/>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <h:outputLabel for="portaOuvinte" styleClass="col-sm-2 control-label" value="Intervalo:"></h:outputLabel>
+                            <h:outputLabel for="horaFim" styleClass="col-sm-2 control-label" value="Hora do Fim:"></h:outputLabel>
                             <div class="col-sm-10">
-                                <h:inputText id="portaOuvinte" styleClass="form-control" value="#{modeloFormBean.master.portaOuvinte}" required="true"></h:inputText>
+                                <p:calendar id="horaFim" value="#{janelaFormBean.janelaSincronizacao.horaFim}" pattern="HH:mm a" timeOnly="true" locale="pt_BR" required="true"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <h:outputLabel for="intervalo" styleClass="col-sm-2 control-label" value="Intervalo (dias):"></h:outputLabel>
+                            <div class="col-sm-10">
+                                <h:inputText id="intervalo" styleClass="form-control" value="#{janelaFormBean.janelaSincronizacao.intervalo}" required="true"></h:inputText>
                             </div>
                         </div>
                     </div>
@@ -52,13 +62,13 @@
             <div class="row">
                 <div class="col-md-10"></div>
                 <div class="col-md-1">
-                    <h:button value="Voltar"
-                              styleClass="btn btn-default form-control"/>
+                    <h:button value="Voltar" styleClass="btn btn-default form-control" outcome="pretty:listaJanela">
+                        <f:param name="idModelo" value="#{janelaFormBean.janelaSincronizacao.modeloMigracao.id}"/>
+                    </h:button>
                 </div>
+
                 <div class="col-md-1">
-                    <h:commandButton value="Salvar"
-                                     styleClass="btn btn-primary form-control"
-                                     action="#{modeloFormBean.salvar}"/>
+                    <h:commandButton value="Salvar" styleClass="btn btn-primary form-control" action="#{janelaFormBean.salvar()}"/>
                 </div>
             </div>
         </h:form>

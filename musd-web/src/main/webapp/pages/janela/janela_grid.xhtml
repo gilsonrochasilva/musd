@@ -1,0 +1,83 @@
+<ui:composition template="./../../WEB-INF/template/default.xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+
+    <ui:define name="title-page">
+        Janelas de Sincronização
+    </ui:define>
+
+    <ui:define name="content-page">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Janelas de Sincronização (<h:outputText value="#{janelaListaBean.modeloMigracao.nome}"></h:outputText>) </h1>
+                <hr />
+            </div>
+        </div>
+
+        <h:form prependId="false">
+            <div class="row">
+                <div class="col-md-9"></div>
+                <div class="col-md-1">
+                    <h:button value="Voltar" styleClass="btn btn-default form-control" outcome="pretty:listaModelo"/>
+                </div>
+                <div class="col-md-2">
+                    <p:button value="Nova Janela" outcome="pretty:novaJanela" styleClass="btn btn-primary form-control">
+                        <f:param name="idModelo" value="#{janelaListaBean.modeloMigracao.id}"/>
+                    </p:button>
+                </div>
+            </div>
+            <br></br>
+            <p:dataTable id="listaJanelas" var="j" value="#{janelaListaBean.janelas}"
+                         paginator="true" rows="10" paginatorPosition="bottom" currentPageReportTemplate="Página {currentPage} de {totalPages}"
+                         paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                         rowsPerPageTemplate="10,20,30" emptyMessage="Nenhuma registro encontrado.">
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Identificação" />
+                    </f:facet>
+                    <h:outputText value="#{j.identificacao}" />
+                </p:column>
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Hora de Início" />
+                    </f:facet>
+                    <h:outputText value="#{j.horaInicio}">
+                        <f:convertDateTime pattern="HH:mm"></f:convertDateTime>
+                    </h:outputText>
+                </p:column>
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Hora do Fim" />
+                    </f:facet>
+                    <h:outputText value="#{j.horaFim}">
+                        <f:convertDateTime pattern="HH:mm"></f:convertDateTime>
+                    </h:outputText>
+                </p:column>
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Intervalo (dias)" />
+                    </f:facet>
+                    <h:outputText value="#{j.intervalo}" />
+                </p:column>
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Opções" />
+                    </f:facet>
+                    <p:button value="Editar" outcome="pretty:editarJanela" icon="ui-icon-pencil" >
+                        <f:param name="id" value="#{j.id}"/>
+                    </p:button>
+                </p:column>
+
+
+            </p:dataTable>
+        </h:form>
+    </ui:define>
+</ui:composition>

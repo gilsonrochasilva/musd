@@ -1,42 +1,75 @@
 package br.com.musd.mb.janelamigracao;
 
 import br.com.musd.administrativo.JanelaSincronizacao;
+import br.com.musd.administrativo.Slave;
 import br.com.musd.mb.common.PaginaBean;
 import br.com.musd.service.JanelaSincronizacaoSrv;
+import br.com.musd.service.ModeloMigracaoSrv;
 import com.ocpsoft.pretty.faces.annotation.URLAction;
 import com.ocpsoft.pretty.faces.annotation.URLMapping;
 import com.ocpsoft.pretty.faces.annotation.URLMappings;
+import org.hibernate.exception.ConstraintViolationException;
 
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
-import java.util.ArrayList;
-import java.util.List;
 
 @ManagedBean
 @ViewScoped
 @URLMappings(mappings = {
-    @URLMapping(id = "novaJanela", pattern = "/janela/novo", viewId = "/pages/janela/janela_form.jsf")
+        @URLMapping(id = "novaJanela", pattern = "/janela/novo/#{idModelo : janelaFormBean.idModelo}", viewId = "/pages/janela/janela_form.jsf"),
+        @URLMapping(id = "editarJanela", pattern = "/janela/editar/#{id : janelaFormBean.id}", viewId = "/pages/janela/janela_form.jsf")
 })
 public class JanelaFormBean extends PaginaBean {
 
+    @EJB
+    private JanelaSincronizacaoSrv janelaSrv;
+
+    @EJB
+    private ModeloMigracaoSrv modeloMigracaoSrv;
+
+    private Integer id;
+
+    private Integer idModelo;
+
     private JanelaSincronizacao janelaSincronizacao;
-    private List<JanelaSincronizacao> listaJanelas;
 
-    @EJB private JanelaSincronizacaoSrv janelaSincronizacaoSrv;
-
-    public JanelaFormBean() {
-    }
 
     @URLAction(mappingId = "novaJanela")
-    public void novo() {
-        this.janelaSincronizacao = new JanelaSincronizacao();
-        this. listaJanelas = new ArrayList<JanelaSincronizacao>();
+    public void init() {
+        if(id == null){
+            janelaSincronizacao = new JanelaSincronizacao();
+            janelaSincronizacao.setModeloMigracao(modeloMigracaoSrv.getUm(idModelo));
+        } else {
+            janelaSincronizacao = janelaSrv.getUm(id);
+        }
     }
 
-    public void salvar() {
-        janelaSincronizacaoSrv.salvar(this.janelaSincronizacao);
-        addInfo("Modelo salvo com sucesso!");
+    @URLAction(mappingId = "editarJanela")
+    public void editar() {
+        if(id == null){
+            janelaSincronizacao = new JanelaSincronizacao();
+        } else {
+            janelaSincronizacao = janelaSrv.getUm(id);
+        }
+    }
+
+    public void salvar(){
+        try {
+            janelaSrv.salvar(janelaSincronizacao);
+            addInfo("Janela salva com sucesso.");
+        }
+        catch (ConstraintViolationException cvex){
+            addWarn("Erro ao salvar registro.");
+        }
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public JanelaSincronizacao getJanelaSincronizacao() {
@@ -47,11 +80,11 @@ public class JanelaFormBean extends PaginaBean {
         this.janelaSincronizacao = janelaSincronizacao;
     }
 
-    public List<JanelaSincronizacao> getListaJanelas() {
-        return listaJanelas;
+    public Integer getIdModelo() {
+        return idModelo;
     }
 
-    public void setListaJanelas(List<JanelaSincronizacao> listaJanelas) {
-        this.listaJanelas = listaJanelas;
+    public void setIdModelo(Integer idModelo) {
+        this.idModelo = idModelo;
     }
 }

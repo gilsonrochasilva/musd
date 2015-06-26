@@ -6,18 +6,16 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26a09e7f-4660-4835-ab05-036f6eabe6bb" name="Default" comment="Pagina default (template)">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/modeloMigracao/ModeloFormBean.java" afterPath="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/modeloMigracao/ModeloFormBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/ModeloMigracaoSrv.java" afterPath="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/ModeloMigracaoSrv.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/slave/SlaveFormBean.java" afterPath="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/slave/SlaveFormBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/slave/SlaveListaBean.java" afterPath="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/slave/SlaveListaBean.java" />
+    <list default="true" id="26a09e7f-4660-4835-ab05-036f6eabe6bb" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/janelamigracao/JanelaListaBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/musd-web/src/main/webapp/pages/janela/janela_grid.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/janelamigracao/JanelaFormBean.java" afterPath="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/janelamigracao/JanelaFormBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musd-model/src/main/java/br/com/musd/administrativo/JanelaSincronizacao.java" afterPath="$PROJECT_DIR$/musd-model/src/main/java/br/com/musd/administrativo/JanelaSincronizacao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/dao/JanelaSincronizacaoDAO.java" afterPath="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/dao/JanelaSincronizacaoDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/JanelaSincronizacaoSrv.java" afterPath="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/JanelaSincronizacaoSrv.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/SlaveSrv.java" afterPath="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/SlaveSrv.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musd-web/src/main/webapp/WEB-INF/template/default.xhtml" afterPath="$PROJECT_DIR$/musd-web/src/main/webapp/WEB-INF/template/default.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musd-web/src/main/webapp/pages/index.xhtml" afterPath="$PROJECT_DIR$/musd-web/src/main/webapp/pages/index.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musd-web/src/main/webapp/pages/janela/janela_form.xhtml" afterPath="$PROJECT_DIR$/musd-web/src/main/webapp/pages/janela/janela_form.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musd-web/src/main/webapp/pages/modelo/modelo_lista.xhtml" afterPath="$PROJECT_DIR$/musd-web/src/main/webapp/pages/modelo/modelo_lista.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musd-web/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/musd-web/src/main/resources/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musd-web/src/main/webapp/pages/slave/slave_form.xhtml" afterPath="$PROJECT_DIR$/musd-web/src/main/webapp/pages/slave/slave_form.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musd-web/src/main/webapp/pages/slave/slave_grid.xhtml" afterPath="$PROJECT_DIR$/musd-web/src/main/webapp/pages/slave/slave_grid.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MUSD.iws" />
@@ -44,96 +42,86 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="default.xhtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/WEB-INF/template/default.xhtml">
+      <file leaf-file-name="janela_grid.xhtml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/pages/janela/janela_grid.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-53.333332">
-              <caret line="86" column="45" selection-start-line="86" selection-start-column="45" selection-end-line="86" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.031914894">
+              <caret line="39" column="62" selection-start-line="39" selection-start-column="62" selection-end-line="39" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SlaveFormBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/slave/SlaveFormBean.java">
+      <file leaf-file-name="JanelaListaBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/janelamigracao/JanelaListaBean.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="62" column="23" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
+              <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
               <folding>
-                <element signature="e#2191#2192#0" expanded="true" />
-                <element signature="e#2222#2223#0" expanded="true" />
-                <element signature="e#2271#2272#0" expanded="true" />
-                <element signature="e#2311#2312#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SlaveSrv.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/SlaveSrv.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6395939">
-              <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModeloMigracaoSrv.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/ModeloMigracaoSrv.java">
+      <file leaf-file-name="persistence.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musd-web/src/main/resources/META-INF/persistence.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ModeloFormBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/modeloMigracao/ModeloFormBean.java">
+      <file leaf-file-name="modelo_lista.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/pages/modelo/modelo_lista.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.222222">
+              <caret line="58" column="69" selection-start-line="58" selection-start-column="69" selection-end-line="58" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="slave_form.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/pages/slave/slave_form.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.3333335">
+              <caret line="35" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="68" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="janela_form.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/pages/janela/janela_form.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.888889">
+              <caret line="41" column="97" selection-start-line="41" selection-start-column="97" selection-end-line="41" selection-end-column="97" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JanelaFormBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/janelamigracao/JanelaFormBean.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
-              <folding />
+              <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+              <folding>
+                <element signature="e#2224#2225#0" expanded="true" />
+                <element signature="e#2266#2267#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.xhtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/pages/index.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0">
-              <caret line="15" column="79" selection-start-line="15" selection-start-column="79" selection-end-line="15" selection-end-column="79" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="slave_grid.xhtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/pages/slave/slave_grid.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.22222222">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SlaveListaBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/slave/SlaveListaBean.java">
+      <file leaf-file-name="JanelaSincronizacao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musd-model/src/main/java/br/com/musd/administrativo/JanelaSincronizacao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModeloListaBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/modeloMigracao/ModeloListaBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="33" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="33" />
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -166,7 +154,6 @@
         <option value="$PROJECT_DIR$/musd-model/src/main/java/br/com/musd/administrativo/DadoConexao.java" />
         <option value="$PROJECT_DIR$/musd-model/src/main/java/br/com/musd/administrativo/DadosConexao.java" />
         <option value="$PROJECT_DIR$/musd-model/src/main/java/br/com/musd/administrativo/Host.java" />
-        <option value="$PROJECT_DIR$/musd-model/src/main/java/br/com/musd/administrativo/JanelaSincronizacao.java" />
         <option value="$PROJECT_DIR$/musd-model/src/main/java/br/com/musd/administrativo/Slave.java" />
         <option value="$PROJECT_DIR$/musd-web/src/main/webapp/WEB-INF/beans.xml" />
         <option value="$PROJECT_DIR$/musd-web/src/main/webapp/WEB-INF/faces-config.xml" />
@@ -179,7 +166,6 @@
         <option value="$PROJECT_DIR$/musd-web/src/main/java/controller/JanelaSincronizacao.java" />
         <option value="$PROJECT_DIR$/musd-web/src/main/java/service/JanelaSincronizacaoSrv.java" />
         <option value="$PROJECT_DIR$/musd-web/src/main/java/service/ModeloMigracaoSrv.java" />
-        <option value="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/JanelaSincronizacaoSrv.java" />
         <option value="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/MasterSrv.java" />
         <option value="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/DadosConexaoSrv.java" />
         <option value="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/dao/BancoDadosDAO.java" />
@@ -191,7 +177,6 @@
         <option value="$PROJECT_DIR$/musd-model/src/main/java/br/com/musd/administrativo/Master.java" />
         <option value="$PROJECT_DIR$/musd-web/src/main/webapp/pages/modelo_form.xhtml" />
         <option value="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/ModeloMigracaoSrv.java" />
-        <option value="$PROJECT_DIR$/musd-web/src/main/webapp/pages/modelo/modelo_lista.xhtml" />
         <option value="$PROJECT_DIR$/musd-web/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/slave/SlaveListaBean.java" />
         <option value="$PROJECT_DIR$/musd-web/src/main/webapp/pages/slave/slave_form.xhtml" />
@@ -200,7 +185,16 @@
         <option value="$PROJECT_DIR$/musd-web/src/main/webapp/WEB-INF/template/default.xhtml" />
         <option value="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/slave/SlaveFormBean.java" />
         <option value="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/modeloMigracao/ModeloFormBean.java" />
+        <option value="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/dao/JanelaSincronizacaoDAO.java" />
         <option value="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/SlaveSrv.java" />
+        <option value="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/janelamigracao/JanelaLista.java" />
+        <option value="$PROJECT_DIR$/musd-web/src/main/webapp/pages/modelo/modelo_lista.xhtml" />
+        <option value="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/janelamigracao/JanelaListaBean.java" />
+        <option value="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/janelamigracao/JanelaFormBean.java" />
+        <option value="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/JanelaSincronizacaoSrv.java" />
+        <option value="$PROJECT_DIR$/musd-web/src/main/webapp/pages/janela/janela_form.xhtml" />
+        <option value="$PROJECT_DIR$/musd-model/src/main/java/br/com/musd/administrativo/JanelaSincronizacao.java" />
+        <option value="$PROJECT_DIR$/musd-web/src/main/webapp/pages/janela/janela_grid.xhtml" />
       </list>
     </option>
   </component>
@@ -468,6 +462,36 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="janela" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MUSD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="musd-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -492,6 +516,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="musd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MUSD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="musd-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="musd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -589,7 +643,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="modeloMigracao" />
+              <option name="myItemId" value="janelamigracao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -608,9 +662,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.musd.mb.janelamigracao" />
       <recent name="br.com.musd.mb" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/musd-web/src/main/webapp/pages/janela" />
       <recent name="$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service" />
       <recent name="$PROJECT_DIR$/musd-web/src/main/webapp/pages" />
     </key>
@@ -938,7 +994,6 @@
     </configuration>
     <configuration default="false" name="MUSD" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 8.2.0.Final" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="/usr/lib/jvm/java-7-oracle/jre">
       <option name="COMMON_VM_ARGUMENTS" value="-server -Xms512m -Xmx1g -Xss256k -XX:PermSize=128m -XX:MaxPermSize=256m -XX:+UseG1GC" />
-      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="musd-web:war exploded">
           <settings />
@@ -1036,7 +1091,7 @@
       <workItem from="1435185935153" duration="2178000" />
       <workItem from="1435188140746" duration="2038000" />
       <workItem from="1435195797419" duration="7643000" />
-      <workItem from="1435329098876" duration="6751000" />
+      <workItem from="1435329098876" duration="10138000" />
     </task>
     <task id="LOCAL-00001" summary="Exclusão do pacote Repository e suas classes">
       <created>1435099849960</created>
@@ -1074,54 +1129,60 @@
       <option name="project" value="LOCAL" />
       <updated>1435202040453</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="CRUD Slaves.">
+      <created>1435346301779</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1435346301779</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33191000" />
+    <option name="totallyTimeSpent" value="36578000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="24" width="1325" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8470209" sideWeight="0.4969697" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5030303" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23612197" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7623457" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.75523347" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8470209" sideWeight="0.4969697" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23612197" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7623457" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5030303" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1138,7 +1199,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.75523347" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8470209" sideWeight="0.4969697" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1167,10 +1228,13 @@
     <MESSAGE value="Implementação dos services" />
     <MESSAGE value="Refactoring packages" />
     <MESSAGE value="Pagina default (template)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pagina default (template)" />
+    <MESSAGE value="CRUD Slaves." />
+    <option name="LAST_COMMIT_MESSAGE" value="CRUD Slaves." />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1178,50 +1242,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/musd-web/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/musd-model/src/main/java/br/com/musd/administrativo/Slave.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/musd-model/src/main/java/br/com/musd/administrativo/DadosConexao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="33" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/musd-model/src/main/java/br/com/musd/administrativo/BancoDados.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="64" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/WEB-INF/template/default.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/pages/index.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/musd-model/src/main/java/br/com/musd/administrativo/BancoDados.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1332,13 +1352,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/JanelaSincronizacaoSrv.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34951457">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/MasterSrv.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1409,13 +1422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/musd-model/src/main/java/br/com/musd/administrativo/JanelaSincronizacao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15332198">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/musd-model/src/main/java/br/com/musd/administrativo/Master.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.51107323">
@@ -1447,17 +1453,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/musd-web/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/modeloMigracao/ModeloListaBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.27241963">
           <caret line="21" column="33" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="33" />
           <folding />
         </state>
@@ -1465,7 +1463,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/slave/SlaveListaBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="1.0304569">
           <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
           <folding />
         </state>
@@ -1487,25 +1485,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/pages/modelo/modelo_lista.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6648936">
-          <caret line="56" column="27" selection-start-line="54" selection-start-column="16" selection-end-line="56" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/pages/slave/slave_form.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.62765956">
-          <caret line="25" column="108" selection-start-line="25" selection-start-column="108" selection-end-line="25" selection-end-column="108" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/pages/index.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
+        <state vertical-scroll-proportion="0.4787234">
           <caret line="15" column="79" selection-start-line="15" selection-start-column="79" selection-end-line="15" selection-end-column="79" />
           <folding />
         </state>
@@ -1519,19 +1501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/slave/SlaveFormBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="23" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
-          <folding>
-            <element signature="e#2191#2192#0" expanded="true" />
-            <element signature="e#2222#2223#0" expanded="true" />
-            <element signature="e#2271#2272#0" expanded="true" />
-            <element signature="e#2311#2312#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/dao/common/DAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
@@ -1542,7 +1511,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/pages/slave/slave_grid.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.22222222">
+        <state vertical-scroll-proportion="0.010638298">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
@@ -1550,7 +1519,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/modeloMigracao/ModeloFormBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.4247039">
           <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
           <folding />
         </state>
@@ -1558,16 +1527,117 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/ModeloMigracaoSrv.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.15059222">
           <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/dao/SlaveDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4568528">
+          <caret line="20" column="5" selection-start-line="14" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/dao/JanelaSincronizacaoDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2741117">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/SlaveSrv.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6395939">
-          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.7309645">
+          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/slave/SlaveFormBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="92" column="5" selection-start-line="28" selection-start-column="4" selection-end-line="92" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/pages/modelo/modelo_lista.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.222222">
+          <caret line="58" column="69" selection-start-line="58" selection-start-column="69" selection-end-line="58" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/janelamigracao/JanelaListaBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/service/JanelaSincronizacaoSrv.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.822335">
+          <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/pages/slave/slave_form.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.3333335">
+          <caret line="35" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="68" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/pages/janela/janela_form.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.888889">
+          <caret line="41" column="97" selection-start-line="41" selection-start-column="97" selection-end-line="41" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musd-web/src/main/java/br/com/musd/mb/janelamigracao/JanelaFormBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+          <folding>
+            <element signature="e#2224#2225#0" expanded="true" />
+            <element signature="e#2266#2267#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musd-model/src/main/java/br/com/musd/administrativo/JanelaSincronizacao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musd-web/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musd-web/src/main/webapp/pages/janela/janela_grid.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.031914894">
+          <caret line="39" column="62" selection-start-line="39" selection-start-column="62" selection-end-line="39" selection-end-column="62" />
           <folding />
         </state>
       </provider>
