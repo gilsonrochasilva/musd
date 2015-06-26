@@ -4,7 +4,6 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui">
-
 <h:head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -55,29 +54,29 @@
                 <ul class="nav navbar-nav">
                     <li>
                         <h:link outcome="pretty:home">
-                            <i class="fa fa-home"/> Home<span class="sr-only">(current)</span>
+                            <i class="fa fa-home"/><h:outputText value=" Home"/><span class="sr-only">(current)</span>
                         </h:link>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <h:link outcome="pretty:novaJanela">
-                            <i class="fa fa-laptop"/> Host
+                            <i class="fa fa-laptop"/> <h:outputText value=" Host"/>
                         </h:link>
                     </li>
                     <li>
                         <h:link outcome="pretty:novaJanela">
-                            <i class="fa fa-database"/> Banco de dados
+                            <i class="fa fa-database"/> <h:outputText value=" Banco de Dados"/>
                         </h:link>
                     </li>
                     <li>
                         <h:link outcome="pretty:novaJanela">
-                            <i class="fa fa-refresh"/> Janela
+                            <i class="fa fa-refresh"/> <h:outputText value=" Janela de Sicronização"/>
                         </h:link>
                     </li>
                     <li>
                         <h:link outcome="pretty:listaModelo">
-                            <i class="fa fa-file-text"/> Modelo
+                            <i class="fa fa-file-text"/> <h:outputText value=" Modelo de Sicronização"/>
                         </h:link>
                     </li>
                     <li class="dropdown">
