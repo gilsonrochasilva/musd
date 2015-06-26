@@ -57,7 +57,11 @@ public class ModeloFormBean extends PaginaBean {
 
     public String salvar() {
         modeloMigracaoSrv.salvar(modeloMigracao, master);
-        addInfo("Modelo salvo com sucesso!");
+        if (id != null) {
+            addInfo("Modelo Alterado com sucesso!");
+        }else{
+            addInfo("Modelo salvo com sucesso!");
+        }
         return "pretty:listaModelo";
     }
 

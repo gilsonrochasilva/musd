@@ -43,5 +43,6 @@ public class ModeloListaBean extends PaginaBean {
 
     public void excluir(ModeloMigracao modeloMigracao){
         modeloMigracaoSrv.excluir(modeloMigracao);
+        init();
     }
 }
